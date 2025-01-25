@@ -24,12 +24,12 @@ public class VariablesTheme {
             System.out.println("тактовая чистота " + processorFrequency);
             System.out.println("тех процесс " + coreTechnology + " нано метров");
             System.out.println("количество ядер " + cores);
-            System.out.println("Твердотельный накопитель марка и модель " + nameSSD);
+            System.out.println("Твердотельный накопитель марка и модель " + nameSsd);
             System.out.println("Объем памяти " + memorySsd + " гигабайт");
             System.out.println("Видео карта " + nameVideoCards + " " + nambeVideoCards + seriaVideoCards);
             System.out.println("с видео памятью " + nameVideoCards + " гигабайт");
-            System.out.println("Оперативная память марки " + nameRAM);
-            System.out.println("Количество оперативной памяти " + RAM + " мегабайт");
+            System.out.println("Оперативная память марки " + nameRam);
+            System.out.println("Количество оперативной памяти " + ram + " мегабайт");
         }
         System.out.println(" ");
 
@@ -37,7 +37,7 @@ public class VariablesTheme {
         float pricePen = 105.5F;
         float priceBook = 235.83F;
         System.out.println("стоимость ручки без скидки " + pricePen + " стоимость книги без скидки " + priceBook);
-        System.out.println()
+        System.out.println();
         float discount = 0.0F;
         float discountPen = pricePen / 100.0F * 11.0F;
         System.out.println("сумма скидки на ручку составляет " + discountPen);
