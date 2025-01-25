@@ -7,8 +7,8 @@ public class VariableNamesTheme {
         System.out.println("Цифра = " + digit);
 
         // сумма чисел
-        int sumNumbers = 83;
-        System.out.println("Сумма чисел = " + sumNumbers);
+        int numberSum = 83;
+        System.out.println("Сумма чисел = " + numbersSum);
 
         // произведение цифр
         int digitProduct = 12;
@@ -23,8 +23,8 @@ public class VariableNamesTheme {
         System.out.println("Количество десятков = " + tenCount);
 
         // вес собаки
-        int dogsWeight = 26;
-        System.out.println("Вес собаки = " + dogsWeight);
+        int dogWeight = 26;
+        System.out.println("Вес собаки = " + dogWeight);
 
         // исходное число
         int initialNumber = 14;
@@ -59,8 +59,8 @@ public class VariableNamesTheme {
         System.out.println("случайное число = " + randomNumber);
 
         // математическое выражение
-        int marhExpression = 4578;
-        System.out.println("Математическое выражение = " + marhExpression);
+        int mathExpression = 4578;
+        System.out.println("Математическое выражение = " + mathExpression);
 
         // счет в игре
         int gameScore = 56;
@@ -159,12 +159,12 @@ public class VariableNamesTheme {
         System.out.println("старый universally unique identifier: " + oldUuid);
 
         // производитель оперативной памяти
-        String containerHdd = "моего Английского";
-        System.out.println("производитель оперативной памяти; " + containerHdd);
+        String hddContainer = "моего Английского";
+        System.out.println("производитель оперативной памяти; " + hddContainer);
 
         // емкость жесткого диска
-        String capacityHdd = "на уровне";
-        System.out.println("емкость жесткого диска: " + capacityHdd);
+        String hddCapacity = "на уровне";
+        System.out.println("емкость жесткого диска: " + hddCapacity);
 
         // протокол передачи гипертекста
         String http = "яндекс переводчик";
