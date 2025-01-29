@@ -8,7 +8,7 @@ public class VariableNamesTheme {
 
         // сумма чисел
         int numberSum = 83;
-        System.out.println("Сумма чисел = " + numbersSum);
+        System.out.println("Сумма чисел = " + numberSum);
 
         // произведение цифр
         int digitProduct = 12;
@@ -52,7 +52,7 @@ public class VariableNamesTheme {
 
         // уникальное число
         int uniqueNumber = 76;
-        System.out.println("Уникальное число = " + uniqyeNumber);
+        System.out.println("Уникальное число = " + uniqueNumber);
 
         // случайное число
         int randomNumber = 8654;
@@ -113,8 +113,8 @@ public class VariableNamesTheme {
         // количество чисел в каждой строке
         int quantityNumbersEachLine = 897;
         System.out.println("Количество чисел в каждой строке = " + quantityNumbersEachLine);
-        System.out.println(" ");
-        System.out.println("2. Boolean - переменные");
+
+        System.out.println("\n2. Boolean - переменные");
 
         // сотни равны?
         boolean isEqualHundreads = true;
@@ -151,35 +151,35 @@ public class VariableNamesTheme {
         // имеются уникальные строки?
         boolean hasUnuqueString = true;
         System.out.println("Имеются уникальные строки? " + hasUnuqueString);
-        System.out.println();
-        System.out.println("3. Аббревиатуры ");
+
+        System.out.println("\n3. Аббревиатуры ");
 
         // старый universally unique identifier
-        String oldUuid = "Знания";
+        int oldUuid = 128;
         System.out.println("старый universally unique identifier: " + oldUuid);
 
         // производитель оперативной памяти
-        String hddContainer = "моего Английского";
-        System.out.println("производитель оперативной памяти; " + hddContainer);
+        String ramFabricator = "Amd";
+        System.out.println("производитель оперативной памяти; " + ramFabricator);
 
         // емкость жесткого диска
-        String hddCapacity = "на уровне";
+        int hddCapacity = 128;
         System.out.println("емкость жесткого диска: " + hddCapacity);
 
         // протокол передачи гипертекста
-        String http = "яндекс переводчик";
+        String http = "World Wide Web";
         System.out.println("протокол передачи гипертекста: " + http);
 
         // сокращенный uniform resource locator
-        String shortUrl = "или лондон оф зе эпиталам оф грей брита";
+        String shortUrl = "URL";
         System.out.println("сокращенный uniform resource locator: " + shortUrl);
 
         // новый идентификатор клиента
-        String newClientId = "прошу понять и простить";
+        int newClientId = 145;
         System.out.println("Новый идентификатор клиента: " + newClientId);
-        
+
         // American standard code for information interchange
-        String ascii = "хорошего дня";
+        String ascii = "ASCII";
         System.out.println("American standard code for information interchange; " + ascii);
     }
 }
