@@ -4,41 +4,39 @@ import java.math.RoundingMode;
 public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("1 Вывод характеристик компьютера ");
-        float cpu = 2.9f;
+        float cpuFrequency = 2.9f;
         double coreTechnology = 0.065d;
         byte cores = 2;
         short ssdMemory = 248;
-        short nambeVideoCards = 920;
+        short numberVideoCards = 920;
         char seriesVideoCards = 'm';
         long vram = 4098;
         int ramMemory = 8000;
         boolean isMemorySsdMoreStated = (ssdMemory >= 18);
         if (isMemorySsdMoreStated) {
-            System.out.println("Ноутбук марки Asus f6e.На борту процессор Intel core 2 Duo с ");
-            System.out.println("тактовой чистотой " + cpu + " Гц и ");
-            System.out.println("тех процессом " + coreTechnology + " нано метров");
-            System.out.println("количество ядер " + cores);
-            System.out.println("Твердотельный накопитель марка и модель Apacher AST 280");
-            System.out.println("Объем памяти " + ssdMemory + " гигабайт");
-            System.out.println("Видео карта Nvidia" + nambeVideoCards + " " + seriesVideoCards);
-            System.out.println("с видео памятью " + vram + " гигабайт");
-            System.out.println("Оперативная память марки Apacher");
-            System.out.println("Количество оперативной памяти " + ramMemory + " мегабайт");
+            System.out.println("Ноутбук марки Asus f6e.На борту процессор Intel core 2 Duo с \n" +
+                    "тактовой чистотой " + cpuFrequency + " Гц и \n" +
+                    "тех процессом " + coreTechnology + " нм" + "количество ядер " + cores  + "\n" +
+                    "Твердотельный накопитель марка и модель Apacher AST 280\n" +
+                    "Объем памяти " + ssdMemory + " ГБ\n" +
+                    "Видео карта Nvidia" + numberVideoCards + " " + seriesVideoCards + "\n" +
+                    "с видео памятью " + vram + " ГБ\n" +
+                    "Оперативная память марки Apacher\n" +
+                    "Количество оперативной памяти " + ramMemory + " Мбайт");
         }
+
         System.out.print("\n2. Расчет стоимости товара со скидкой");
-        float pricePen = 105.5F;
-        float priceBook = 235.83F;
-        System.out.println("Стоимость ручки " + pricePen);
-        System.out.println("Стоимость книги " + priceBook);
-        System.out.println("Cтоимость ручки без скидки " + pricePen);
-        System.out.println("Cтоимость книги без скидки " + priceBook);
+        float penPrice = 105.5F;
+        float bookPrice = 235.83F;
+        System.out.println("Цена ручки " + penPrice);
+        System.out.println("Цена книги " + bookPrice);
         float discount = 11.0F;
-        float discountPen = pricePen / 100.0F * discount;
+        float discountPen = penPrice / 100.0F * discount;
         System.out.println("Cумма скидки на ручку составляет " + discountPen);
-        float discountBook = priceBook / 100.0F * discount;
+        float discountBook = bookPrice / 100.0F * discount;
         System.out.println("Сумма скидки на книмгу " + discountBook);
-        System.out.println("Cтоимость ручки со скидкой составит " + (pricePen - discountPen));
-        System.out.println("Стоимость книги со скидкой составит " + (priceBook - discountBook));
+        System.out.println("Цена ручки со скидкой составит " + (penPrice - discountPen));
+        System.out.println("Цена книги со скидкой составит " + (bookPrice - discountBook));
 
         System.out.println("\n3. Вывод слова JAVA");
         System.out.println("    J    a  V     V  a     ");
@@ -52,31 +50,31 @@ public class VariablesTheme {
         extremesShortValue++;
         System.out.println("инкремент " + extremesShortValue);
         extremesShortValue--;
-        System.out.println(" декремент " + extremesShortValue);
+        System.out.println("декремент " + extremesShortValue);
         byte extremesByteValue = 127;
         System.out.println("byte начальное значение " + extremesByteValue);
         extremesByteValue++;
-        System.out.println("Инкремент " + extremesByteValue);
+        System.out.println("инкремент " + extremesByteValue);
         extremesByteValue--;
-        System.out.println(" декремент " + extremesByteValue);
+        System.out.println("декремент " + extremesByteValue);
         int extremesIntValue = 2147483647;
         System.out.println("int начальное значение " + extremesIntValue);
         extremesIntValue++;
-        System.out.println("Инкремент " + extremesIntValue);
+        System.out.println("инкремент " + extremesIntValue);
         extremesIntValue--;
-        System.out.println(" декремент " + extremesIntValue);
+        System.out.println("декремент " + extremesIntValue);
         long extremesLongValue = 9223372036854775807L;
         System.out.println("long начальное значение " + extremesLongValue);
         extremesLongValue++;
-        System.out.println("Инкремент " + extremesLongValue);
+        System.out.println("инкремент " + extremesLongValue);
         extremesLongValue--;
-        System.out.println(" декремент " + extremesLongValue);
+        System.out.println("декремент " + extremesLongValue);
         char extremesCharValue = 65535;
         System.out.println("char начальное значение " + (int) extremesCharValue);
         extremesCharValue++;
         System.out.println("инкремент " + (int) extremesCharValue);
         extremesCharValue--;
-        System.out.println(" декремент " + (int) extremesCharValue);
+        System.out.println("декремент " + (int) extremesCharValue);
 
         System.out.println("\n5. Перестановка значений переменных ");
         int numberA = 2;
@@ -102,12 +100,12 @@ public class VariablesTheme {
         char asterisk = '*';
         char atSign = '@';
         char circumflex = '^';
-        char tilda = '~';
+        char tilde = '~';
         System.out.println("Код символа " + (int) dollar + " символ " + dollar);
         System.out.println("Код символа " + (int) asterisk + " символ " + asterisk);
         System.out.println("Код символа " + (int) atSign + " символ " + atSign);
         System.out.println("Код символа " + (int) circumflex + " символ " + circumflex);
-        System.out.println("Код символа " + (int) tilda + " символ " + tilda);
+        System.out.println("Код символа " + (int) tilde + " символ " + tilde);
 
         System.out.println("\n7. Вывод в консоль ASCII-арт Дюка ");
         char slash = '/';
@@ -137,28 +135,26 @@ public class VariablesTheme {
         System.out.println("Произведение разрядов = " + multiplication);
 
         System.out.println("\n9. Перевод секунд в часы, минуты и секунды");
-        int numberSeconds = 86399;
-        int hours = numberSeconds / 3600;
-        int minutes = numberSeconds % 3600 / 60;
-        int seconds = numberSeconds % 60;
-        System.out.println(hours + " : " + minutes + " : " + seconds);
+        int totalSeconds = 86399;
+        int hh = totalSeconds / 3600;
+        int mm = totalSeconds % 3600 / 60;
+        int ss = totalSeconds % 60;
+        System.out.println(hh + " : " + mm + " : " + ss);
 
         System.out.println("\n10. *Расчет стоимости товара со скидкой");
         var penBd = new BigDecimal("105.5");
         var bookBd = new BigDecimal("235.83");
-        var discountUpgrade = new BigDecimal("0.11");
-        var discountPenUpgrade = penBd.multiply(discountUpgrade);
-        var discountBookUpgrade = bookBd.multiply(discountUpgrade);
-        var pricePenUpgrade = penBd.subtract(discountPenUpgrade).setScale(2, RoundingMode.HALF_UP);
-        var priceBookUpgrade = bookBd.subtract(discountBookUpgrade).setScale(2, RoundingMode.HALF_UP);
+        var discountBd = new BigDecimal("0.11");
+        var discountPenBd = penBd.multiply(discountBd);
+        var discountBookBd = bookBd.multiply(discountBd);
+        var pricePenBd = penBd.subtract(discountPenBd).setScale(2, RoundingMode.HALF_UP);
+        var priceBookBd = bookBd.subtract(discountBookBd).setScale(2, RoundingMode.HALF_UP);
         System.out.println("Стоимость ручки " + penBd);
         System.out.println("Стоимость книги " + bookBd);
-        System.out.println("Стоимость ручки без скидки составляет: " + penBd);
-        System.out.println("Стоимость книги без скидки составляет: " + bookBd);
-        System.out.println("Сумма скидки на ручку составит: " + discountPenUpgrade);
-        System.out.println("Сумма скидки на книгу составит: " + discountBookUpgrade);
-        System.out.println("Стоимость ручки со скидкой составит: " + pricePenUpgrade);
-        System.out.println("Стоимость книги со скидкой составит: " + priceBookUpgrade);
+        System.out.println("Сумма скидки на ручку составит: " + discountPenBd);
+        System.out.println("Сумма скидки на книгу составит: " + discountBookBd);
+        System.out.println("Стоимость ручки со скидкой составит: " + pricePenBd);
+        System.out.println("Стоимость книги со скидкой составит: " + priceBookBd);
     }
 }
 
