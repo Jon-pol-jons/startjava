@@ -16,7 +16,7 @@ public class VariablesTheme {
         if (isMemorySsdMoreStated) {
             System.out.println("Ноутбук марки Asus f6e.На борту процессор Intel core 2 Duo с \n" +
                     "тактовой чистотой " + cpuFrequency + " Гц и \n" +
-                    "тех процессом " + coreTechnology + " нм" + "количество ядер " + cores  + "\n" +
+                    "тех процессом " + coreTechnology + " нм" + "количество ядер " + cores + "\n" +
                     "Твердотельный накопитель марка и модель Apacher AST 280\n" +
                     "Объем памяти " + ssdMemory + " ГБ\n" +
                     "Видео карта Nvidia" + numberVideoCards + " " + seriesVideoCards + "\n" +
@@ -25,16 +25,16 @@ public class VariablesTheme {
                     "Количество оперативной памяти " + ramMemory + " Мбайт");
         }
 
-        System.out.print("\n2. Расчет стоимости товара со скидкой");
+        System.out.print("\n" + "2. Расчет стоимости товара со скидкой");
         float penPrice = 105.5F;
         float bookPrice = 235.83F;
         System.out.println("Цена ручки " + penPrice);
         System.out.println("Цена книги " + bookPrice);
         float discount = 11.0F;
         float discountPen = penPrice / 100.0F * discount;
-        System.out.println("Cумма скидки на ручку составляет " + discountPen);
+        System.out.println("Cумма скидки на ручку составит " + discountPen);
         float discountBook = bookPrice / 100.0F * discount;
-        System.out.println("Сумма скидки на книмгу " + discountBook);
+        System.out.println("Сумма скидки на книгу составит" + discountBook);
         System.out.println("Цена ручки со скидкой составит " + (penPrice - discountPen));
         System.out.println("Цена книги со скидкой составит " + (bookPrice - discountBook));
 
@@ -142,19 +142,18 @@ public class VariablesTheme {
         System.out.println(hh + " : " + mm + " : " + ss);
 
         System.out.println("\n10. *Расчет стоимости товара со скидкой");
-        var penBd = new BigDecimal("105.5");
-        var bookBd = new BigDecimal("235.83");
+        var pricePenBd = new BigDecimal("105.5");
+        var priceBookBd = new BigDecimal("235.83");
         var discountBd = new BigDecimal("0.11");
-        var discountPenBd = penBd.multiply(discountBd);
-        var discountBookBd = bookBd.multiply(discountBd);
-        var pricePenBd = penBd.subtract(discountPenBd).setScale(2, RoundingMode.HALF_UP);
-        var priceBookBd = bookBd.subtract(discountBookBd).setScale(2, RoundingMode.HALF_UP);
-        System.out.println("Стоимость ручки " + penBd);
-        System.out.println("Стоимость книги " + bookBd);
+        var discountPenBd = pricePenBd.multiply(discountBd);
+        var discountBookBd = priceBookBd.multiply(discountBd);
+        var priceDiscountedPenBd = pricePenBd.subtract(discountPenBd).setScale(2, RoundingMode.HALF_UP);
+        var priceDiscountedBookBd = priceBookBd.subtract(discountBookBd).setScale(2, RoundingMode.HALF_UP);
+        System.out.println("Стоимость ручки " + pricePenBd);
+        System.out.println("Стоимость книги " + priceBookBd);
         System.out.println("Сумма скидки на ручку составит: " + discountPenBd);
         System.out.println("Сумма скидки на книгу составит: " + discountBookBd);
-        System.out.println("Стоимость ручки со скидкой составит: " + pricePenBd);
-        System.out.println("Стоимость книги со скидкой составит: " + priceBookBd);
+        System.out.println("Стоимость ручки со скидкой составит: " + priceDiscountedPenBd);
+        System.out.println("Стоимость книги со скидкой составит: " + priceDiscountedBookBd);
     }
 }
-
