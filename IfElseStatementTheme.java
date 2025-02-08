@@ -4,86 +4,78 @@ import java.math.RoundingMode;
 public class IfElseStatementTheme {
     public static void main(String[] args) {
         System.out.println("1. Перевод псевдокода на язык Java");
-        int age = 18;
-        float height = 1.72F;
-        boolean men = true;
-        if (!men) {
+        boolean isMan = true;
+        if (!isMan) {
             System.out.println("поздравляю, в женщина");
         } else {
             System.out.println("вы мужчина");
         }
+        int age = 18;
         if (age >= 17) {
             System.out.println("Поздравляю, ты стал совершенно летним");
         } else {
             System.out.println("Error: вам нет 18 лет");
         }
+        float height = 1.72F;
         if (height < 1.8) {
             System.out.println("Вы низкий человек");
         } else {
             System.out.println("Вы высокий человек");
         }
-        char firstLatterName = "Misha".charAt(0);
-        if (firstLatterName == 'M') {
+        char firstLetterName = "Misha".charAt(0);
+        if (firstLetterName == 'M') {
             System.out.println("Первам буква именир совпадает с вашем именем");
-        } else if (firstLatterName == 'I') {
+        } else if (firstLetterName == 'I') {
             System.out.println("Ваша первая буква не совпадает с вашем именем");
         } else {
             System.out.println("Ошибка");
         }
 
-        System.out.println("\n 2. Поиск большего числа");
-        int randomNumber1 = 126;
-        int randomNumber2 = 86;
-        if (randomNumber1 > randomNumber2) {
-            System.out.println("число " + randomNumber1 + " больше чем число " + randomNumber2);
-        } else if (randomNumber1 < randomNumber2) {
-            System.out.println("число " + randomNumber1 + " меньше чем число " + randomNumber2);
-        } else if (randomNumber1 == randomNumber2) {
-            System.out.println("число " + randomNumber1 + " такое же, как и число " + randomNumber2);
+        System.out.println("\n2. Поиск большего числа");
+        int checkedNumber1 = 126;
+        int checkedNumber2 = 86;
+        if (checkedNumber1 > checkedNumber2) {
+            System.out.println("число " + checkedNumber1 + " больше чем числа " + checkedNumber2);
+        } else if (checkedNumber1 < checkedNumber2) {
+            System.out.println("число " + checkedNumber1 + " меньше чем числа " + checkedNumber2);
+        } else {
+            System.out.println("число " + checkedNumber1 + " такое же, как и числа " + checkedNumber2);
         }
 
         System.out.println("\n3. проверка числа");
-        int numberInteger = 56;
-        if (numberInteger != 0) {
-            System.out.println(numberInteger + " не является нулем");
-            int buf = numberInteger % 2;
-            switch (buf) {
-                case 0:
-                    if (numberInteger < 0) {
-                        System.out.println(numberInteger + " является отрицательным и четным числом");
-                    } else if (numberInteger > 0) {
-                        System.out.println(numberInteger + " является полежительным и четным числом");
-                    }
-                    break;
-                case 1:
-                    if (numberInteger < 0) {
-                        System.out.println(numberInteger + " является отрицательным и не четным числом");
-                    } else if (numberInteger > 0) {
-                        System.out.println(numberInteger + " является полежительным и не четным числом");
-                    }
-                    break;
+        checkedNumber1 = -56;
+        if (checkedNumber1 != 0) {
+            checkedNumber2 = checkedNumber1 % 2;
+            String parityNumber = "";
+            String positiveOrNegativeNumber = "";
+            if (checkedNumber2 == 0) {
+                parityNumber = "четным";
+            } else if (checkedNumber2 != 0) {
+                parityNumber = "не четным";
             }
-            if (numberInteger < 0) {
-                System.out.println(numberInteger + " является отрицательным числом");
-            } else if (numberInteger > 0) {
-                System.out.println(numberInteger + " является полежительным числом");
+            if (checkedNumber1 > 0) {
+                positiveOrNegativeNumber = "положительное";
+            } else {
+                positiveOrNegativeNumber = "отрицательное ";
             }
+            System.out.println(checkedNumber1 + " является " + positiveOrNegativeNumber +
+                    " и " + parityNumber);
         } else {
-            System.out.println(numberInteger + " является нулем");
+            System.out.println(checkedNumber1 + " является нулем");
         }
 
         System.out.println("\n4. Поиск одинаковых цифр в числах");
-        int numberA = 123;
-        int numberB = 122;
-        int numberAhundredCount = numberA / 100;
-        int numberAtenCount = numberA % 100 / 10;
-        int numberAunits = numberA % 10;
-        int numberBhundredCount = numberB / 100;
-        int numberBtenCount = numberB % 100 / 10;
-        int numberBunits = numberB % 10;
+        int number1Hundreds = 123;
+        int number2Ones = 122;
+        int numberAhundredCount = number1Hundreds / 100;
+        int numberAtenCount = number1Hundreds % 100 / 10;
+        int numberAunits = number1Hundreds % 10;
+        int numberBhundredCount = number2Ones / 100;
+        int numberBtenCount = number2Ones % 100 / 10;
+        int numberBunits = number2Ones % 10;
         if (numberAhundredCount == numberBhundredCount || numberAtenCount == numberBtenCount ||
                 numberAunits == numberBunits) {
-            System.out.println("Исходные числа " + numberA + " и " + numberB);
+            System.out.println("Исходные числа " + number1Hundreds + " и " + number2Ones);
             if (numberAhundredCount == numberBhundredCount) {
                 System.out.println("Одинаковая цифра " + numberAhundredCount + " в разряде сотня");
             }
@@ -100,9 +92,9 @@ public class IfElseStatementTheme {
         System.out.println("\n5.Определение символа по его коду");
         char symbol = '\u0031';
         if (symbol >= 'a' && symbol <= 'z') {
-            System.out.println(symbol + " - буква маленькая");
+            System.out.println(symbol + " - маленькая буква");
         } else if (symbol >= 'A' && symbol <= 'Z') {
-            System.out.println(symbol + " - буква большая");
+            System.out.println(symbol + " -  большая буква");
         } else if (symbol >= '0' && symbol <= '9') {
             System.out.println(symbol + " - цифра");
         } else {
@@ -111,56 +103,42 @@ public class IfElseStatementTheme {
 
         System.out.println("\n6. Подсчет начисленных банком %");
         float depositAmount = 321123.59F;
-        float interestRate = 0.0F;
+        float interestRate = 10.0F;
         if (depositAmount < 100000) {
             interestRate = 5.0F;
-        }
-        if (depositAmount > 100000 && depositAmount < 300000) {
+        } else if (depositAmount > 100000 && depositAmount < 300000) {
             interestRate = 7.0F;
         }
-        if (depositAmount > 300000) {
-            interestRate = 10.0F;
-        }
-        float percentNumber = depositAmount * interestRate / 100;
-        float sumFinal = percentNumber + depositAmount;
+        float apr = depositAmount * interestRate / 100;
+        float yield = apr + depositAmount;
         System.out.println("Сумма вклада " + depositAmount);
-        System.out.println("Сумма начисленного процента составит " + percentNumber);
-        System.out.println("Итоговая сумма с процентами составит " + sumFinal);
+        System.out.println("Сумма начисленного процента составит " + apr);
+        System.out.println("Итоговая сумма с процентами составит " + yield);
 
         System.out.println("\n7. Определение оценки по предметам");
-        int historySubject = 59;
-        int historyAssessment = 0;
-        if (historySubject <= 60) {
-            historyAssessment = 2;
-        }
-        if (historySubject > 60) {
+        int percentHistorySubject = 59;
+        int percentProgrammingSubject = 92;
+        int historyAssessment = 2;
+        if (percentHistorySubject > 60 && percentHistorySubject <= 73) {
             historyAssessment = 3;
-        }
-        if (historySubject > 73) {
+        } else if (percentHistorySubject > 73 && percentHistorySubject <= 91) {
             historyAssessment = 4;
-        }
-        if (historySubject > 91) {
+        } else if (percentHistorySubject > 91) {
             historyAssessment = 5;
         }
-        int programmingSubject = 92;
-        int programmingAssessment = 0;
-        if (programmingSubject <= 60) {
-            programmingAssessment = 2;
-        }
-        if (programmingSubject > 60) {
+        int programmingAssessment = 2;
+        if (percentProgrammingSubject > 60 && percentProgrammingSubject <= 73) {
             programmingAssessment = 3;
-        }
-        if (programmingSubject > 73) {
+        } else if (percentProgrammingSubject > 73 && percentProgrammingSubject <= 91) {
             programmingAssessment = 4;
-        }
-        if (programmingSubject > 91) {
+        } else if (percentProgrammingSubject > 91) {
             programmingAssessment = 5;
         }
-        float averageScoreSubjects = (programmingAssessment + historyAssessment) / 2f;
-        float averagePercentSubjects = (historySubject + programmingSubject) / 2f;
-        System.out.println("Оценка по истории " + historyAssessment);
-        System.out.println("Оценка по программированию " + programmingAssessment);
-        System.out.println("Cредний бал оценок по предметам " + averageScoreSubjects);
+        float averageGradeSubjects = (programmingAssessment + historyAssessment) / 2f;
+        float averagePercentSubjects = (percentHistorySubject + percentProgrammingSubject) / 2f;
+        System.out.println("оценка по истории " + historyAssessment);
+        System.out.println("оценка по программированию " + programmingAssessment);
+        System.out.println("средний балл оценок по предметам " + averageGradeSubjects);
         System.out.println("средний % по предметам " + averagePercentSubjects + "%");
 
         System.out.println("\n8.Расчет годовой прибыли");
@@ -169,7 +147,8 @@ public class IfElseStatementTheme {
         float costProduction = 9001.729F;
         float profitYearly = (profitGross - rentPremises - costProduction) * 12F;
         if (profitYearly > 0) {
-            System.out.println("годовая прибыль составляет " + "+" + profitYearly + " руб.");
+            char plus = '+';
+            System.out.println("годовая прибыль составляет " + plus + profitYearly + " руб.");
         } else {
             System.out.println("годовая прибыль составляет " + profitYearly + " руб.");
         }
@@ -178,78 +157,67 @@ public class IfElseStatementTheme {
         var profitGrossBd = new BigDecimal(13025.233);
         var rentPremisesBd = new BigDecimal(5123.018);
         var costProductionBd = new BigDecimal(9001.729);
-        var oneYear = new BigDecimal(12);
-        var profitYearlyBd = profitGrossBd.subtract(rentPremisesBd).subtract(costProductionBd);
-        profitYearlyBd = profitYearlyBd.multiply(oneYear).setScale(2, RoundingMode.HALF_UP);
+        var profitYearlyBd = (profitGrossBd.subtract(rentPremisesBd).subtract(costProductionBd)
+                .multiply(BigDecimal.valueOf(12)).setScale(2, RoundingMode.HALF_UP));
         double newVariableBd = profitYearlyBd.floatValue();
         if (newVariableBd > 0) {
-            System.out.println("годовая прибыль составляет " + "+" + profitYearlyBd + " руб.");
+            char plus = '+';
+            System.out.println("годовая прибыль составляет " + plus + profitYearlyBd + " руб.");
         } else {
             System.out.println("годовая прибыль составляет " + profitYearlyBd + " руб.");
         }
 
         System.out.println("\n10. *Подсчет начисленных банком %");
         float depositAmountBd = 321123.59F;
-        float interestRateBd = 0.0F;
+        float interestRateBd = 10.0F;
         if (depositAmountBd < 100000) {
             interestRateBd = 5.0F;
-        }
-        if (depositAmountBd > 100000 && depositAmountBd < 300000) {
+        } else if (depositAmountBd > 100000 && depositAmountBd < 300000) {
             interestRateBd = 7.0F;
         }
-        if (depositAmountBd > 300000) {
-            interestRateBd = 10.0F;
-        }
-        var variableBufferInterestRateBd = new BigDecimal(interestRateBd);
-        var variableBufferdepositAmountBd = new BigDecimal(depositAmountBd);
-        var percentNumberBd = variableBufferdepositAmountBd.multiply(variableBufferInterestRateBd);
-        percentNumberBd = percentNumberBd.divide(BigDecimal.valueOf(100)).setScale(2, RoundingMode.HALF_UP);
-        var sumFinalBd = percentNumberBd.add(variableBufferdepositAmountBd).setScale(2, RoundingMode.HALF_UP);
+        var bufferInterestRateBd = new BigDecimal(interestRateBd);
+        var bufferdepositAmountBd = new BigDecimal(depositAmountBd);
+        var aprBd = (bufferdepositAmountBd.multiply(bufferInterestRateBd))
+                .divide(BigDecimal.valueOf(100)).setScale(2, RoundingMode.HALF_UP);
+        var yieldBd = aprBd.add(bufferdepositAmountBd).setScale(2, RoundingMode.HALF_UP);
         System.out.println("Сумма вклада " + depositAmountBd);
-        System.out.println("Сумма начисленного процента составит " + percentNumberBd);
-        System.out.println("Итоговая сумма с процентами составит " + sumFinalBd);
+        System.out.println("Сумма начисленного процента составит " + aprBd);
+        System.out.println("Итоговая сумма с процентами составит " + yieldBd);
 
         System.out.println("\n11. *Определение оценки по предметам");
-        var historySubjectBd = new BigDecimal(59);
-        var programmingSubjectBd = new BigDecimal(92);
-        var averagePercentSubjectsBd = historySubjectBd.add(programmingSubjectBd);
-        averagePercentSubjectsBd = averagePercentSubjectsBd.divide(BigDecimal.valueOf(2))
-                .setScale(2, RoundingMode.HALF_UP);
-        System.out.println("оценка по истории " + historySubjectBd);
-        System.out.println("оценка по программированию " + programmingSubjectBd);
+        var percentHistorySubjectBd = new BigDecimal(59);
+        var percentProgrammingSubjectBd = new BigDecimal(92);
+        var averagePercentSubjectsBd = (percentHistorySubjectBd.add(percentProgrammingSubjectBd))
+                .divide(BigDecimal.valueOf(2)).setScale(2, RoundingMode.HALF_UP);
+        System.out.println("оценка по истории " + percentHistorySubjectBd);
+        System.out.println("оценка по программированию " + percentProgrammingSubjectBd);
         System.out.println("средний % по предметам " + averagePercentSubjectsBd);
-        var historiBufferVariableBd = historySubjectBd.intValue();
-        int historyAssessmentBd = 0;
-        if (historiBufferVariableBd <= 60) {
-            historyAssessmentBd = 2;
-        }
-        if (historiBufferVariableBd > 60) {
+        var historiBufferBd = percentHistorySubjectBd.intValue();
+        int historyAssessmentBd = 2;
+        if (historiBufferBd > 60) {
             historyAssessmentBd = 3;
         }
-        if (historiBufferVariableBd > 73) {
+        if (historiBufferBd > 73) {
             historyAssessmentBd = 4;
         }
-        if (historiBufferVariableBd > 91) {
+        if (historiBufferBd > 91) {
             historyAssessmentBd = 5;
         }
-        var programmingBufferVariable = programmingSubjectBd.intValue();
-        int programmingAssessmentBd = 0;
-        if (programmingBufferVariable <= 60) {
-            programmingAssessmentBd = 2;
-        }
-        if (programmingBufferVariable > 60) {
+        var programmingBuffer = percentProgrammingSubjectBd.intValue();
+        int programmingAssessmentBd = 2;
+        if (programmingBuffer > 60) {
             programmingAssessmentBd = 3;
         }
-        if (programmingBufferVariable > 73) {
+        if (programmingBuffer > 73) {
             programmingAssessmentBd = 4;
         }
-        if (programmingBufferVariable > 91) {
+        if (programmingBuffer > 91) {
             programmingAssessmentBd = 5;
         }
-        var historiAverageScoreBd = new BigDecimal(historyAssessmentBd);
-        var programmingAverageScoreBd = new BigDecimal(programmingAssessmentBd);
-        var sumAverageScoreBd = historiAverageScoreBd.add(programmingAverageScoreBd);
-        sumAverageScoreBd = sumAverageScoreBd.divide(BigDecimal.valueOf(2)).setScale(2, RoundingMode.HALF_UP);
-        System.out.println("Cредний бал оценок по предметам " + sumAverageScoreBd);
+        var historiGradeScoreBd = new BigDecimal(historyAssessmentBd);
+        var programmingGradeScoreBd = new BigDecimal(programmingAssessmentBd);
+        var averageGradeSubjectsBd = (historiGradeScoreBd.add(programmingGradeScoreBd))
+                .divide(BigDecimal.valueOf(2)).setScale(2, RoundingMode.HALF_UP);
+        System.out.println("средний бал оценок по предметам " + averageGradeSubjectsBd);
     }
 }
