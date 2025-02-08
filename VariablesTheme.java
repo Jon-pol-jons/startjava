@@ -25,7 +25,7 @@ public class VariablesTheme {
                     "Количество оперативной памяти " + ramMemory + " Мбайт");
         }
 
-        System.out.print("\n" + "2. Расчет стоимости товара со скидкой");
+        System.out.print("\n2. Расчет стоимости товара со скидкой");
         float penPrice = 105.5F;
         float bookPrice = 235.83F;
         System.out.println("Цена ручки " + penPrice);
