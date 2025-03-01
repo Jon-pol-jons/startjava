@@ -1,229 +1,181 @@
-public class CyclesTheme {
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+public class IfElseStatementTheme {
     public static void main(String[] args) {
-        System.out.println("1. ПОДСЧЕТ СУММЫ ЧЕТНЫХ И НЕЧЕТНЫХ ЧИСЕЛ");
-        int checkedNumber1 = -10;
-        int checkedNumber2 = 21;
-        int numberEntries = checkedNumber1;
-        int evenSum = 0;
-        int oddSum = 0;
-        do {
-            if (numberEntries % 2 == 0) {
-                evenSum += numberEntries;
-            } else {
-                oddSum += numberEntries;
-            }
-            numberEntries++;
-        } while (numberEntries <= checkedNumber2);
-        System.out.println("В отрезке [" + checkedNumber1 + "," + checkedNumber2 +
-                "] сумма четных чисел = " + evenSum + ",  а нечетных = " +
-                oddSum);
-
-        System.out.println("\n2. ВЫВОД ЧИСЕЛ МЕЖДУ MIN И MAX В ПОРЯДКЕ УБЫВАНИЯ");
-        checkedNumber1 = 10;
-        checkedNumber2 = 5;
-        int checkedNumber3 = -1;
-        int minNumber = 0;
-        int maxNumber = 0;
-        if (checkedNumber1 > checkedNumber2 && checkedNumber2 > checkedNumber3) {
-            maxNumber = checkedNumber1;
-            minNumber = checkedNumber3;
-        } else if (checkedNumber3 > checkedNumber2 && checkedNumber2 > checkedNumber1) {
-            maxNumber = checkedNumber3;
-            minNumber = checkedNumber1;
-        } else if (checkedNumber2 > checkedNumber3 && checkedNumber3 > checkedNumber1) {
-            maxNumber = checkedNumber2;
-            minNumber = checkedNumber1;
-        } else if (checkedNumber1 > checkedNumber3 && checkedNumber3 > checkedNumber2) {
-            maxNumber = checkedNumber1;
-            minNumber = checkedNumber2;
-        } else if (checkedNumber3 > checkedNumber1 && checkedNumber1 > checkedNumber2) {
-            maxNumber = checkedNumber3;
-            minNumber = checkedNumber2;
-        } else if (checkedNumber2 > checkedNumber1 && checkedNumber1 > checkedNumber3) {
-            maxNumber = checkedNumber2;
-            minNumber = checkedNumber3;
-        }
-        for (maxNumber -= 1; maxNumber > minNumber; maxNumber--) {
-            System.out.print(maxNumber + " ");
-        }
-
-        System.out.println("\n\n3. ВЫВОД РЕВЕРСИВНОГО ЧИСЛА И СУММЫ ЕГО ЦИФР");
-        checkedNumber1 = 1234;
-        checkedNumber2 = checkedNumber1;
-        int reverse = 0;
-        int sum = 0;
-        while (checkedNumber2 != 0) {
-            reverse = reverse * 10;
-            reverse = reverse + checkedNumber2 % 10;
-            checkedNumber2 = checkedNumber2 / 10;
-        }
-        int sumCheckedNumber = checkedNumber1;
-        while (sumCheckedNumber != 0) {
-            sum = sum + sumCheckedNumber % 10;
-            sumCheckedNumber = sumCheckedNumber / 10;
-        }
-        System.out.println("number " + reverse);
-        System.out.println("sum " + sum);
-
-        System.out.println("\n4. ВЫВОД ЧИСЕЛ В НЕСКОЛЬКО СТРОК");
-        checkedNumber1 = 22;
-        checkedNumber2 = 0;
-        int counter = 0;
-        int sumCounter = 0;
-        for (int i = 1; i <= checkedNumber1; i++) {
-            checkedNumber2 = i;
-            if (checkedNumber2 % 2 != 0) {
-                counter += 1;
-                System.out.printf("%4d", i);
-            }
-            if (checkedNumber2 % 10 == 0) {
-                System.out.println();
-            }
-        }
-        char ziro = '0';
-        sumCounter = 15 - counter;
-        while (sumCounter >= 1) {
-            System.out.printf("%4c", ziro);
-            sumCounter--;
-        }
-
-        System.out.println("\n\n5. ПРОВЕРКА КОЛИЧЕСТВА ДВОЕК ЧИСЛА НА ЧЕТНОСТЬ/НЕЧЕТНОСТЬ");
-        checkedNumber1 = 3242592;
-        checkedNumber2 = checkedNumber1;
-        counter = 0;
-        while (checkedNumber2 != 0) {
-            if (checkedNumber2 % 10 == 2) {
-                counter++;
-            }
-            checkedNumber2 = checkedNumber2 / 10;
-        }
-        if (counter % 2 == 0) {
-            System.out.println("В " + checkedNumber1 + " четное (" + counter + ") количество двоек");
-        } else if (counter % 2 != 0) {
-            System.out.println("В " + checkedNumber1 + " не четное (" + counter + ") количество двоек");
-        }
-
-        System.out.println("\n6. ВЫВОД ГЕОМЕТРИЧЕСКИХ ФИГУР");
-        int size1 = 10;
-        int size2 = 5;
-        for (int i = 0; i < size2; i++) {
-            for (int j = 0; j < size1; j++) {
-                if (i == j || i == size1 - j - 1) {
-                    System.out.print("*");
-                } else {
-                    System.out.print("*");
-                }
-            }
-            System.out.println();
-        }
-        System.out.println();
-
-        size1 = 5;
-        int size3 = size1;
-        while (size3 >= 1) {
-            int j = size3;
-            while (j >= 1) {
-                if (size3 == 1 || size3 == size1 || j == 1 || j == size3) {
-                    System.out.print("#");
-                } else {
-                    System.out.print("#");
-                }
-                j--;
-            }
-            System.out.println();
-            size3--;
-        }
-        System.out.println();
-
-        size3 = 1;
-        do {
-            int j = 1;
-            do {
-                System.out.print("$");
-                j++;
-            } while (j <= size3);
-            System.out.println();
-            size3++;
-        } while (size3 <= 3);
-        size3 = 1;
-        do {
-            int j = 2;
-            do {
-                System.out.print("$");
-                j--;
-            } while (j >= size3);
-            System.out.println();
-            size3++;
-        } while (size3 <= 2);
-
-        System.out.println("\n7. ВЫВОД ASCII-СИМВОЛОВ");
-        int notEvenNumber = 0;
-        System.out.format("%5s%11s%20s", "DECIMAL", "CHARACTER", "DESCRIPTION");
-        for (int i = 33; i <= 45; i++) {
-            notEvenNumber = i;
-            if (notEvenNumber % 2 != 0) {
-                String name = Character.getName(notEvenNumber);
-                System.out.printf("%n %-12d%-13c%s", i, i, name);
-            }
-        }
-
-        System.out.println("\n\n8. ПРОВЕРКА, ЯВЛЯЕТСЯ ЛИ ЧИСЛО ПАЛИНДРОМОМ");
-        checkedNumber1 = 1234321;
-        // последняя цифра в числе
-        int digitlast = checkedNumber1 % 10;
-        // первая цифра в числе
-        int digitFirst = checkedNumber1;
-        while (digitFirst >= 10) {
-            digitFirst = digitFirst / 10;
-        }
-        if (digitlast == digitFirst) {
-            System.out.println("Число " + checkedNumber1 + " - палиндром");
+        System.out.println("1. Перевод псевдокода на язык Java");
+        boolean isMan = true;
+        if (!isMan) {
+            System.out.println("поздравляю, в женщина");
         } else {
-            System.out.println("Число " + checkedNumber1 + " - не палиндром");
+            System.out.println("вы мужчина");
         }
-
-        System.out.println("\n9. ПРОВЕРКА, ЯВЛЯЕТСЯ ЛИ ЧИСЛО СЧАСТЛИВЫМ");
-        checkedNumber1 = 123321;
-        int halfLeftDigits = checkedNumber1;
-        int halfRightDigits = checkedNumber1;
-        while (halfLeftDigits > 1000) {
-            halfLeftDigits /= 1000;
-        }
-        while (halfRightDigits > 1000) {
-            halfRightDigits %= 1000; 
-        }
-        int sumLeftDigits = 0;
-        int buf1 = halfLeftDigits;
-        while (buf1 > 0) {
-            sumLeftDigits = sumLeftDigits + buf1 % 10;
-            buf1 = buf1 / 10;
-        }
-        int sumRightDigits = 0;
-        int buf2 = halfRightDigits;
-        while (buf2 > 0) {
-            sumRightDigits = sumRightDigits + buf2 % 10;
-            buf2 = buf2 / 10;
-        }
-        if (sumLeftDigits == sumRightDigits) {
-            System.out.println("Число " + checkedNumber1 + " - счастливое");
-            System.out.println("Сумма цифр  " + halfLeftDigits + " = " + sumLeftDigits);
-            System.out.println("Сумма " + halfRightDigits + " = " + sumRightDigits);
+        int age = 18;
+        if (age >= 17) {
+            System.out.println("Поздравляю, ты стал совершенно летним");
         } else {
-            System.out.println("Число " + checkedNumber1 + " - не является счастливым");
-            System.out.println("Сумма цифр " + halfLeftDigits + " = " + sumLeftDigits);
-            System.out.println("Сумма " + halfRightDigits + " = " + sumRightDigits);
+            System.out.println("Error: вам нет 18 лет");
+        }
+        float height = 1.72F;
+        if (height < 1.8) {
+            System.out.println("Вы низкий человек");
+        } else {
+            System.out.println("Вы высокий человек");
+        }
+        char firstLetterName = "Misha".charAt(0);
+        if (firstLetterName == 'M') {
+            System.out.println("Первая буква имени совпадает с вашем именем");
+        } else if (firstLetterName == 'I') {
+            System.out.println("Ваша первая буква не совпадает с вашем именем");
+        } else {
+            System.out.println("Ошибка");
         }
 
-        System.out.println("\n10. ВЫВОД ТАБЛИЦЫ УМНОЖЕНИЯ ПИФАГОРА");
-        System.out.printf("   |  2  3  4  5  6  7  8  9%n");
-        System.out.printf(" --+------------------------%n");
-        for (int i = 2; i <= 9; i++) {
-            String leftAlignment = " %s |";
-            System.out.format(leftAlignment, i);
-            for (int j = 2; j <= 9; j++) {
-                System.out.printf("%3d", i * j);
-            }
-            System.out.println();
+        System.out.println("\n2. Поиск большего числа");
+        int checkedNumber1 = 126;
+        int checkedNumber2 = 86;
+        if (checkedNumber1 > checkedNumber2) {
+            System.out.println("число " + checkedNumber1 + " больше числа " + checkedNumber2);
+        } else if (checkedNumber1 < checkedNumber2) {
+            System.out.println("число " + checkedNumber1 + " меньше числа " + checkedNumber2);
+        } else {
+            System.out.println("число " + checkedNumber1 + " такое же, как и число " + checkedNumber2);
         }
+
+        System.out.println("\n3. проверка числа");
+        checkedNumber1 = 56;
+        if (checkedNumber1 != 0) {
+            checkedNumber2 = checkedNumber1 % 2;
+            String parityNumber = "четным";
+            if (checkedNumber2 != 0) {
+                parityNumber = "не четным";
+            }
+            String positiveOrNegativeNumber = "положительным";
+            if (checkedNumber1 < 0) {
+                positiveOrNegativeNumber = "отрицательным";
+            }
+            System.out.println(checkedNumber1 + " является " + positiveOrNegativeNumber +
+                    " и " + parityNumber);
+        } else {
+            System.out.println(checkedNumber1 + " является нулем");
+        }
+
+        System.out.println("\n4. Поиск одинаковых цифр в числах");
+        checkedNumber1 = 123;
+        checkedNumber2 = 122;
+        int numberAhundred = checkedNumber1 / 100;
+        int numberAten = checkedNumber1 % 100 / 10;
+        int numberAones = checkedNumber1 % 10;
+        int numberBhundred = checkedNumber2 / 100;
+        int numberBten = checkedNumber2 % 100 / 10;
+        int numberBones = checkedNumber2 % 10;
+        if (numberAhundred == numberBhundred || numberAten == numberBten ||
+                numberAones == numberBones) {
+            System.out.println("Исходные числа " + checkedNumber1 + " и " + checkedNumber2);
+            if (numberAhundred == numberBhundred) {
+                System.out.println("Одинаковая цифра " + numberAhundred + " в разряде сотня");
+            }
+            if (numberAten == numberBten) {
+                System.out.println("Одинаковая цифра " + numberAten + " в разряде десятка");
+            }
+            if (numberAones == numberBones) {
+                System.out.println("Одинаковая цифра " + numberAones + " в разряде единица");
+            }
+        } else {
+            System.out.println("Совпадений не найдено");
+        }
+
+        System.out.println("\n5.Определение символа по его коду");
+        char symbol = '\u0031';
+        if (symbol >= 'a' && symbol <= 'z') {
+            System.out.println(symbol + " - маленькая буква");
+        } else if (symbol >= 'A' && symbol <= 'Z') {
+            System.out.println(symbol + " -  большая буква");
+        } else if (symbol >= '0' && symbol <= '9') {
+            System.out.println(symbol + " - цифра");
+        } else {
+            System.out.println(symbol + " - ни буква и ни цифра");
+        }
+
+        System.out.println("\n6. Подсчет начисленных банком %");
+        float depositAmount = 321123.59F;
+        float interestRate = 10.0F;
+        if (depositAmount < 100000) {
+            interestRate = 5.0F;
+        } else if (depositAmount > 100000 && depositAmount < 300000) {
+            interestRate = 7.0F;
+        }
+        float apr = depositAmount * interestRate / 100;
+        float yield = apr + depositAmount;
+        System.out.println("Сумма вклада " + depositAmount);
+        System.out.println("Сумма начисленного процента составит " + apr);
+        System.out.println("Итоговая сумма с процентами составит " + yield);
+
+        System.out.println("\n7. Определение оценки по предметам");
+        int percentHistorySubject = 59;
+        int historyGrade = 2;
+        if (percentHistorySubject > 60 && percentHistorySubject <= 73) {
+            historyGrade = 3;
+        } else if (percentHistorySubject > 73 && percentHistorySubject <= 91) {
+            historyGrade = 4;
+        } else if (percentHistorySubject > 91) {
+            historyGrade = 5;
+        }
+        int percentProgrammingSubject = 92;
+        int programmingAssessment = 2;
+        if (percentProgrammingSubject > 60 && percentProgrammingSubject <= 73) {
+            programmingAssessment = 3;
+        } else if (percentProgrammingSubject > 73 && percentProgrammingSubject <= 91) {
+            programmingAssessment = 4;
+        } else if (percentProgrammingSubject > 91) {
+            programmingAssessment = 5;
+        }
+        float averageGradeSubjects = (programmingAssessment + historyGrade) / 2f;
+        float averagePercentSubjects = (percentHistorySubject + percentProgrammingSubject) / 2f;
+        System.out.println("оценка по истории " + historyGrade);
+        System.out.println("оценка по программированию " + programmingAssessment);
+        System.out.println("средний балл оценок по предметам " + averageGradeSubjects);
+        System.out.println("средний % по предметам " + averagePercentSubjects + "%");
+
+        System.out.println("\n8.Расчет годовой прибыли");
+        float profitGross = 13025.233F;
+        float rentPremises = 5123.018F;
+        float costProduction = 9001.729F;
+        float profitYearly = (profitGross - rentPremises - costProduction) * 12F;
+        if (profitYearly > 0) {
+            System.out.println("годовая прибыль составляет +" + profitYearly + " руб.");
+        } else {
+            System.out.println("годовая прибыль составляет " + profitYearly + " руб.");
+        }
+
+        System.out.println("\n9. *Расчет годовой прибыли");
+        var profitGrossBd = new BigDecimal(13025.233);
+        var rentPremisesBd = new BigDecimal(5123.018);
+        var costProductionBd = new BigDecimal(9001.729);
+        var profitYearlyBd = (profitGrossBd.subtract(rentPremisesBd).subtract(costProductionBd)
+                .multiply(BigDecimal.valueOf(12)).setScale(2, RoundingMode.HALF_UP));
+        double newValueBd = profitYearlyBd.floatValue();
+        if (newValueBd > 0) {
+            System.out.println("годовая прибыль составляет +" + profitYearlyBd + " руб.");
+        } else {
+            System.out.println("годовая прибыль составляет " + profitYearlyBd + " руб.");
+        }
+
+        System.out.println("\n10. *Подсчет начисленных банком %");
+        float depositAmountBd = 321123.59F;
+        float interestRateBd = 10.0F;
+        if (depositAmountBd < 100000) {
+            interestRateBd = 5.0F;
+        } else if (depositAmountBd > 100000 && depositAmountBd < 300000) {
+            interestRateBd = 7.0F;
+        }
+        var newValueInterestRateBd = new BigDecimal(interestRateBd);
+        var newValueDepositAmountBd = new BigDecimal(depositAmountBd);
+        var aprBd = (newValueDepositAmountBd.multiply(newValueInterestRateBd))
+                .divide(BigDecimal.valueOf(100)).setScale(2, RoundingMode.HALF_UP);
+        var yieldBd = aprBd.add(newValueDepositAmountBd).setScale(2, RoundingMode.HALF_UP);
+        System.out.println("Сумма вклада " + depositAmountBd);
+        System.out.println("Сумма начисленного процента составит " + aprBd);
+        System.out.println("Итоговая сумма с процентами составит " + yieldBd);
     }
 }
