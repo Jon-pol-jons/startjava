@@ -1,7 +1,5 @@
-package lesson4;
 
 import java.util.Random;
-
 public class RpsGameFormatting {
     // Игра Камень-Ножницы-Бумага
     public static void main(String[] args) throws InterruptedException {
