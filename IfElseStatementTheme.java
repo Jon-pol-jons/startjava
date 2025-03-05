@@ -43,21 +43,21 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n3. проверка числа");
-        checkedNumber1 = 56;
-        if (checkedNumber1 != 0) {
-            checkedNumber2 = checkedNumber1 % 2;
+        int checkedNumber = 57;
+        if (checkedNumber != 0) {
+            int parityNumber2 = checkedNumber % 2;
             String parityNumber = "четным";
-            if (checkedNumber2 != 0) {
+            if (parityNumber2 != 0) {
                 parityNumber = "не четным";
             }
             String positiveOrNegativeNumber = "положительным";
-            if (checkedNumber1 < 0) {
+            if (checkedNumber < 0) {
                 positiveOrNegativeNumber = "отрицательным";
             }
-            System.out.println(checkedNumber1 + " является " + positiveOrNegativeNumber +
+            System.out.println(checkedNumber + " является " + positiveOrNegativeNumber +
                     " и " + parityNumber);
         } else {
-            System.out.println(checkedNumber1 + " является нулем");
+            System.out.println(checkedNumber + " является нулем");
         }
 
         System.out.println("\n4. Поиск одинаковых цифр в числах");
@@ -112,26 +112,26 @@ public class IfElseStatementTheme {
         System.out.println("Итоговая сумма с процентами составит " + yield);
 
         System.out.println("\n7. Определение оценки по предметам");
-        int percentHistorySubject = 59;
+        int percentHistory = 59;
         int historyGrade = 2;
-        if (percentHistorySubject > 60 && percentHistorySubject <= 73) {
+        if (percentHistory > 60 && percentHistory <= 73) {
             historyGrade = 3;
-        } else if (percentHistorySubject > 73 && percentHistorySubject <= 91) {
+        } else if (percentHistory > 73 && percentHistory <= 91) {
             historyGrade = 4;
-        } else if (percentHistorySubject > 91) {
+        } else if (percentHistory > 91) {
             historyGrade = 5;
         }
-        int percentProgrammingSubject = 92;
+        int percentProgramming = 92;
         int programmingAssessment = 2;
-        if (percentProgrammingSubject > 60 && percentProgrammingSubject <= 73) {
+        if (percentProgramming > 60 && percentProgramming <= 73) {
             programmingAssessment = 3;
-        } else if (percentProgrammingSubject > 73 && percentProgrammingSubject <= 91) {
+        } else if (percentProgramming > 73 && percentProgramming <= 91) {
             programmingAssessment = 4;
-        } else if (percentProgrammingSubject > 91) {
+        } else if (percentProgramming > 91) {
             programmingAssessment = 5;
         }
         float averageGradeSubjects = (programmingAssessment + historyGrade) / 2f;
-        float averagePercentSubjects = (percentHistorySubject + percentProgrammingSubject) / 2f;
+        float averagePercentSubjects = (percentHistory + percentProgramming) / 2f;
         System.out.println("оценка по истории " + historyGrade);
         System.out.println("оценка по программированию " + programmingAssessment);
         System.out.println("средний балл оценок по предметам " + averageGradeSubjects);
@@ -154,14 +154,9 @@ public class IfElseStatementTheme {
         var costProductionBd = new BigDecimal(9001.729);
         var profitYearlyBd = (profitGrossBd.subtract(rentPremisesBd).subtract(costProductionBd)
                 .multiply(BigDecimal.valueOf(12)).setScale(2, RoundingMode.HALF_UP));
-        double newValueBd = profitYearlyBd.floatValue();
-        if (newValueBd > 0) {
-            System.out.println("годовая прибыль составляет +" + profitYearlyBd + " руб.");
-        } else {
-            System.out.println("годовая прибыль составляет " + profitYearlyBd + " руб.");
-        }
+        System.out.printf("годовая прибыль составляет %+.2f руб", profitYearlyBd);
 
-        System.out.println("\n10. *Подсчет начисленных банком %");
+        System.out.println("\n\n10. *Подсчет начисленных банком %");
         float depositAmountBd = 321123.59F;
         float interestRateBd = 10.0F;
         if (depositAmountBd < 100000) {
@@ -169,11 +164,11 @@ public class IfElseStatementTheme {
         } else if (depositAmountBd > 100000 && depositAmountBd < 300000) {
             interestRateBd = 7.0F;
         }
-        var newValueInterestRateBd = new BigDecimal(interestRateBd);
-        var newValueDepositAmountBd = new BigDecimal(depositAmountBd);
-        var aprBd = (newValueDepositAmountBd.multiply(newValueInterestRateBd))
+        var interestRateBd2 = new BigDecimal(interestRateBd);
+        var depositAmountBd2 = new BigDecimal(depositAmountBd);
+        var aprBd = (depositAmountBd2.multiply(interestRateBd2))
                 .divide(BigDecimal.valueOf(100)).setScale(2, RoundingMode.HALF_UP);
-        var yieldBd = aprBd.add(newValueDepositAmountBd).setScale(2, RoundingMode.HALF_UP);
+        var yieldBd = aprBd.add(depositAmountBd2).setScale(2, RoundingMode.HALF_UP);
         System.out.println("Сумма вклада " + depositAmountBd);
         System.out.println("Сумма начисленного процента составит " + aprBd);
         System.out.println("Итоговая сумма с процентами составит " + yieldBd);
