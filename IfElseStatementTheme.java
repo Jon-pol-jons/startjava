@@ -1,3 +1,4 @@
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -45,9 +46,8 @@ public class IfElseStatementTheme {
         System.out.println("\n3. проверка числа");
         int checkedNumber = 57;
         if (checkedNumber != 0) {
-            int parityNumber2 = checkedNumber % 2;
             String parityNumber = "четным";
-            if (parityNumber2 != 0) {
+            if (checkedNumber % 2 != 0) {
                 parityNumber = "не четным";
             }
             String positiveOrNegativeNumber = "положительным";
@@ -102,7 +102,7 @@ public class IfElseStatementTheme {
         float interestRate = 10.0F;
         if (depositAmount < 100000) {
             interestRate = 5.0F;
-        } else if (depositAmount > 100000 && depositAmount < 300000) {
+        } else if (depositAmount >= 100000 && depositAmount <= 300000) {
             interestRate = 7.0F;
         }
         float apr = depositAmount * interestRate / 100;
@@ -112,26 +112,26 @@ public class IfElseStatementTheme {
         System.out.println("Итоговая сумма с процентами составит " + yield);
 
         System.out.println("\n7. Определение оценки по предметам");
-        int percentHistory = 59;
+        int historyPercent = 59;
         int historyGrade = 2;
-        if (percentHistory > 60 && percentHistory <= 73) {
+        if (historyPercent > 60 && historyPercent <= 73) {
             historyGrade = 3;
-        } else if (percentHistory > 73 && percentHistory <= 91) {
+        } else if (historyPercent > 73 && historyPercent <= 91) {
             historyGrade = 4;
-        } else if (percentHistory > 91) {
+        } else if (historyPercent > 91) {
             historyGrade = 5;
         }
-        int percentProgramming = 92;
+        int programmingPercent = 92;
         int programmingAssessment = 2;
-        if (percentProgramming > 60 && percentProgramming <= 73) {
+        if (programmingPercent > 60 && programmingPercent <= 73) {
             programmingAssessment = 3;
-        } else if (percentProgramming > 73 && percentProgramming <= 91) {
+        } else if (programmingPercent > 73 && programmingPercent <= 91) {
             programmingAssessment = 4;
-        } else if (percentProgramming > 91) {
+        } else if (programmingPercent > 91) {
             programmingAssessment = 5;
         }
         float averageGradeSubjects = (programmingAssessment + historyGrade) / 2f;
-        float averagePercentSubjects = (percentHistory + percentProgramming) / 2f;
+        float averagePercentSubjects = (historyPercent + programmingPercent) / 2f;
         System.out.println("оценка по истории " + historyGrade);
         System.out.println("оценка по программированию " + programmingAssessment);
         System.out.println("средний балл оценок по предметам " + averageGradeSubjects);
@@ -141,7 +141,7 @@ public class IfElseStatementTheme {
         float profitGross = 13025.233F;
         float rentPremises = 5123.018F;
         float costProduction = 9001.729F;
-        float profitYearly = (profitGross - rentPremises - costProduction) * 12F;
+        float profitYearly = (profitGross - rentPremises - costProduction) * 12;
         if (profitYearly > 0) {
             System.out.println("годовая прибыль составляет +" + profitYearly + " руб.");
         } else {
@@ -149,9 +149,9 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n9. *Расчет годовой прибыли");
-        var profitGrossBd = new BigDecimal(13025.233);
-        var rentPremisesBd = new BigDecimal(5123.018);
-        var costProductionBd = new BigDecimal(9001.729);
+        var profitGrossBd = new BigDecimal("13025.233");
+        var rentPremisesBd = new BigDecimal("5123.018");
+        var costProductionBd = new BigDecimal("9001.729");
         var profitYearlyBd = (profitGrossBd.subtract(rentPremisesBd).subtract(costProductionBd)
                 .multiply(BigDecimal.valueOf(12)).setScale(2, RoundingMode.HALF_UP));
         System.out.printf("годовая прибыль составляет %+.2f руб", profitYearlyBd);
@@ -161,7 +161,7 @@ public class IfElseStatementTheme {
         float interestRateBd = 10.0F;
         if (depositAmountBd < 100000) {
             interestRateBd = 5.0F;
-        } else if (depositAmountBd > 100000 && depositAmountBd < 300000) {
+        } else if (depositAmountBd >= 100000 && depositAmountBd <= 300000) {
             interestRateBd = 7.0F;
         }
         var interestRateBd2 = new BigDecimal(interestRateBd);
