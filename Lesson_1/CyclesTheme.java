@@ -1,10 +1,9 @@
-
 public class CyclesTheme {
     public static void main(String[] args) {
         System.out.println("1. ПОДСЧЕТ СУММЫ ЧЕТНЫХ И НЕЧЕТНЫХ ЧИСЕЛ");
-        int initialNumber1 = -10;
-        int initialNumber2 = 21;
-        int counter = initialNumber1;
+        int beginningCountdown = -10;
+        int endCountdown = 21;
+        int counter = beginningCountdown;
         int evenSum = 0;
         int oddSum = 0;
         do {
@@ -14,9 +13,9 @@ public class CyclesTheme {
                 oddSum += counter;
             }
             counter++;
-        } while (counter <= initialNumber2);
-        System.out.println("В отрезке [" + initialNumber1 + "," + initialNumber2 +
-                "] сумма четных чисел = " + evenSum + ",  а нечетных = " + oddSum);
+        } while (counter <= endCountdown);
+        System.out.println("В отрезке [" + beginningCountdown + "," + endCountdown +
+                "] сумма четных чисел = " + evenSum + ", а нечетных = " + oddSum);
 
         System.out.println("\n2. ВЫВОД ЧИСЕЛ МЕЖДУ MIN И MAX В ПОРЯДКЕ УБЫВАНИЯ");
         int checkedNumber1 = 10;
@@ -42,23 +41,22 @@ public class CyclesTheme {
         checkedNumber1 = 1234;
         int currentNumber = checkedNumber1;
         int sumCheckedNumber = checkedNumber1;
-        int reverse = 0;
+        int reversed = 0;
         int sum = 0;
         while (currentNumber > 0) {
-            reverse *= 10;
-            reverse += currentNumber % 10;
+            reversed = currentNumber % 10;
+            System.out.print(reversed);
             currentNumber /= 10;
             sum += sumCheckedNumber % 10;
             sumCheckedNumber /= 10;
         }
-        System.out.println("исходное число в обратном порядке " + reverse);
-        System.out.println("сумма выделенных цифр " + sum);
+        System.out.println("\nсумма выделенных цифр " + sum);
 
         System.out.println("\n4. ВЫВОД ЧИСЕЛ В НЕСКОЛЬКО СТРОК");
-        int initialNumber = 23;
+        endCountdown = 23;
         counter = 0;
         int maxNumberCounter = 0;
-        for (int i = 1; i <= initialNumber; i++) {
+        for (int i = 1; i <= endCountdown; i++) {
             if (i % 2 != 0) {
                 counter++;
                 System.out.printf("%4d", i);
@@ -66,10 +64,10 @@ public class CyclesTheme {
             if (i % 10 == 0) {
                 System.out.println();
             }
-            maxNumberCounter = counter;
-            while (maxNumberCounter % 5 != 0) {
-                maxNumberCounter++;
-            }
+        }
+        maxNumberCounter = counter;
+        while (maxNumberCounter % 5 != 0) {
+            maxNumberCounter++;
         }
         maxNumberCounter -= counter;
         while (maxNumberCounter >= 1) {
@@ -94,77 +92,71 @@ public class CyclesTheme {
         }
 
         System.out.println("\n6. ВЫВОД ГЕОМЕТРИЧЕСКИХ ФИГУР");
-        int size1 = 10;
-        int size2 = 5;
-        for (int i = 0; i < size2; i++) {
-            for (int j = 0; j < size1; j++) {
-                if (i == j || i == size1 - j - 1) {
-                    System.out.print("*");
-                } else {
-                    System.out.print("*");
-                }
+        int rectangleWidth = 10;
+        int rectangleHeight = 5;
+        for (int i = 0; i < rectangleHeight; i++) {
+            for (int j = 0; j < rectangleWidth; j++) {
+                System.out.print("*");
             }
             System.out.println();
         }
         System.out.println();
 
-        size1 = 5;
-        int size3 = size1;
-        while (size3 >= 1) {
-            int j = size3;
-            while (j >= 1) {
-                if (size3 == 1 || size3 == size1 || j == 1 || j == size3) {
-                    System.out.print("#");
-                } else {
-                    System.out.print("#");
-                }
-                j--;
-            }
-            System.out.println();
-            size3--;
-        }
-        System.out.println();
-
-        size3 = 1;
-        do {
+        int widthTriangle = 5;
+        while (widthTriangle >= 1) {
             int j = 1;
-            do {
-                System.out.print("$");
+            while (j <= widthTriangle) {
+                System.out.print("#");
                 j++;
-            } while (j <= size3);
+            }
             System.out.println();
-            size3++;
-        } while (size3 <= 3);
-        size3 = 1;
+            widthTriangle--;
+        }
+        System.out.println();
+
+        widthTriangle = 3;
+        int numberLines = 2 * widthTriangle - 1;
+        counter = 1;
+        int increment = 1;
+        int lineWidth = 1;
         do {
-            int j = 2;
+            int j = 0;
             do {
                 System.out.print("$");
-                j--;
-            } while (j >= size3);
+            } while (++j < lineWidth);
             System.out.println();
-            size3++;
-        } while (size3 <= 2);
+            if (counter == widthTriangle) increment = -1;
+            lineWidth += increment;
+        } while (++counter <= numberLines);
 
         System.out.println("\n7. ВЫВОД ASCII-СИМВОЛОВ");
-        int notEvenNumber = 0;
-        System.out.format("%5s%11s%20s", "DECIMAL", "CHARACTER", "DESCRIPTION");
-        for (int i = 33; i <= 45; i++) {
-            notEvenNumber = i;
-            if (notEvenNumber % 2 != 0) {
-                String name = Character.getName(notEvenNumber);
-                System.out.printf("%n %-12d%-13c%s", i, i, name);
+        int oddNumber = 0;
+        System.out.format("%5s%11s%14s", "DECIMAL", "CHARACTER", "DESCRIPTION");
+        for (int i = 33; i <= 47; i++) {
+            oddNumber = i;
+            if (oddNumber % 2 != 0) {
+                String name = Character.getName(oddNumber);
+                System.out.printf("%n  %-11d%-13c%s", i, i, name);
+            }
+        }
+        for (int i = 97; i < 123; i++) {
+            oddNumber = i;
+            if (oddNumber % 2 == 0) {
+                String name = Character.getName(oddNumber);
+                System.out.printf("%n  %-11d%-13c%s", i, i, name);
             }
         }
 
         System.out.println("\n\n8. ПРОВЕРКА, ЯВЛЯЕТСЯ ЛИ ЧИСЛО ПАЛИНДРОМОМ");
-        initialNumber = 1234321;
-        int digitLast = initialNumber % 10;
-        int digitFirst = initialNumber;
-        while (digitFirst >= 10) {
-            digitFirst /= 10;
+        int initialNumber = 1234321;
+        int palindrome = initialNumber;
+        reversed = 0;
+        while (palindrome != 0) {
+            int remainder = palindrome % 10;
+            reversed = reversed * 10 + remainder;
+            palindrome = palindrome / 10;
         }
-        if (digitLast == digitFirst) {
+        if (initialNumber == reversed) {
             System.out.println("Число " + initialNumber + " - палиндром");
         } else {
             System.out.println("Число " + initialNumber + " - не палиндром");
@@ -174,21 +166,21 @@ public class CyclesTheme {
         initialNumber = 123321;
         int halfLeftDigits = initialNumber;
         int halfRightDigits = initialNumber;
-        while (halfLeftDigits > 1000) {
-            halfLeftDigits /= 1000;
-        }
-        while (halfRightDigits > 1000) {
-            halfRightDigits %= 1000;
-        }
         int sumLeftDigits = 0;
+        int sumRightDigits = 0;
+        for (int i = 0; i < initialNumber; i++) {
+            if (halfLeftDigits > 1000) {
+                halfLeftDigits /= 1000;
+            }
+            if (halfRightDigits > 1000) {
+                halfRightDigits %= 1000;
+            }
+        }
         int buf1 = halfLeftDigits;
-        while (buf1 > 0) {
+        int buf2 = halfRightDigits;
+        while (buf1 > 0 && buf2 > 0) {
             sumLeftDigits += buf1 % 10;
             buf1 /= 10;
-        }
-        int sumRightDigits = 0;
-        int buf2 = halfRightDigits;
-        while (buf2 > 0) {
             sumRightDigits += buf2 % 10;
             buf2 /= 10;
         }
@@ -206,8 +198,7 @@ public class CyclesTheme {
         System.out.printf("   |  2  3  4  5  6  7  8  9%n");
         System.out.printf(" --+------------------------%n");
         for (int i = 2; i <= 9; i++) {
-            String leftAlignment = " %s |";
-            System.out.format(leftAlignment, i);
+            System.out.printf(" %2s|", i);
             for (int j = 2; j <= 9; j++) {
                 System.out.printf("%3d", i * j);
             }
@@ -215,3 +206,4 @@ public class CyclesTheme {
         }
     }
 }
+
