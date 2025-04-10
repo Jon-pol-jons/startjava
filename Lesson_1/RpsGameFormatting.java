@@ -1,5 +1,5 @@
-
 import java.util.Random;
+
 public class RpsGameFormatting {
     // Игра Камень-Ножницы-Бумага
     public static void main(String[] args) throws InterruptedException {
@@ -15,7 +15,7 @@ public class RpsGameFormatting {
 
         if (position1 >= 66) {
             sign1 = paper;
-        } else if (position1 >= 33 && position1 < 66) {
+        } else if (position1 >= 33) {
             sign1 = scissors;
         }
 
@@ -38,7 +38,7 @@ public class RpsGameFormatting {
 
         if (position2 >= 66) {
             sign2 = paper;
-        } else if (position2 >= 33 && position2 < 66) {
+        } else if (position2 >= 33) {
             sign2 = scissors;
         }
 
