@@ -175,7 +175,6 @@ public class CyclesTheme {
         }
         if (sumLeftDigits == sumRightDigits) {
             System.out.println("Число " + initialNumber + " - счастливое");
-
         } else {
             System.out.println("Число " + initialNumber + " - не является счастливым");
         }
