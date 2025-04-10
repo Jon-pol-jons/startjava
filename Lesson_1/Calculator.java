@@ -1,30 +1,30 @@
 import java.util.Scanner;
 
-public class Calculator {
+public class calculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число А");
-        int checkedNumber1 = scanner.nextInt();
+        int Number1 = scanner.nextInt();
         System.out.println("Введите число В");
-        int checkedNumber2 = scanner.nextInt();
-        System.out.println("Введите операцию над числами");
+        int Number2 = scanner.nextInt();
+        System.out.println("Введите математическую операцию");
         char symbol = scanner.next().charAt(0);
         int result = 1;
         if (symbol == '+') {
-            result = checkedNumber1 + checkedNumber2;
+            result = Number1 + Number2;
         } else if (symbol == '-') {
-            result = checkedNumber1 - checkedNumber2;
+            result = Number1 - Number2;
         } else if (symbol == '*') {
-            result = checkedNumber1 * checkedNumber2;
+            result = Number1 * Number2;
         } else if (symbol == '/') {
-            result = checkedNumber1 / checkedNumber2;
+            result = Number1 / Number2;
         } else if (symbol == '^') {
-            for (int i = 1; i <= checkedNumber2; i++) {
-                result *= checkedNumber1;
+            for (int i = 1; i <= Number2; i++) {
+                result *= Number1;
             }
         } else if (symbol == '%') {
-            result = checkedNumber1 % checkedNumber2;
+            result = Number1 % Number2;
         }
-        System.out.println(checkedNumber1 + " " + symbol + " " + checkedNumber2 + " = " + result);
+        System.out.println(Number1 + " " + symbol + " " + Number2 + " = " + result);
     }
 }
