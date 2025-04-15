@@ -1,3 +1,5 @@
+package Lesson2;
+
 import java.util.Scanner;
 
 public class Calculator {
@@ -8,23 +10,22 @@ public class Calculator {
     private int result = 0;
     Scanner scanner = new Scanner(System.in);
 
-    public int ScannerNumber1() {
+    public int scannerNumber1() {
         System.out.print("Введите первое число: ");
         number1 = scanner.nextInt();
         return number1;
     }
 
-    public int ScannerNumber2() {
+    public int scannerNumber2() {
         System.out.print("Введите второе число: ");
         number2 = scanner.nextInt();
         return number2;
     }
 
-    public char ScannerSymbol() {
+    public char scannerSymbol() {
         System.out.print("Введите знак операции (+, -, *, /, ^, %): ");
         symbol = scanner.next().charAt(0);
         return symbol;
-
     }
 
     public int mathematicalCalculations() {
@@ -65,7 +66,6 @@ public class Calculator {
     public double negativeDegree() {
         if (number2 < 0) {
             resultNegativeDegree = Math.pow(number1, number2);
-
         }
         return resultNegativeDegree;
     }
