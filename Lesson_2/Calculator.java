@@ -5,63 +5,53 @@ import java.util.Scanner;
 public class Calculator {
     private int number1;
     private int number2;
-    private char symbol;
+    private char mathematicalSign;
+    private double resultNegativeDegree;
 
     private int result = 0;
+
+    public void setNumber1(int number1) {
+        this.number1 = number1;
+    }
+
+    public void setNumber2(int number2) {
+        this.number2 = number2;
+    }
+
+    public void setMathematicalSign(char mathematicalSign) {
+        this.mathematicalSign = mathematicalSign;
+    }
+
     Scanner scanner = new Scanner(System.in);
 
-    public int scannerNumber1() {
-        System.out.print("Введите первое число: ");
-        number1 = scanner.nextInt();
-        return number1;
-    }
 
-    public int scannerNumber2() {
-        System.out.print("Введите второе число: ");
-        number2 = scanner.nextInt();
-        return number2;
-    }
-
-    public char scannerSymbol() {
-        System.out.print("Введите знак операции (+, -, *, /, ^, %): ");
-        symbol = scanner.next().charAt(0);
-        return symbol;
-    }
-
-    public int mathematicalCalculations() {
-        switch (symbol) {
+    public int calculate() {
+        switch (mathematicalSign) {
             case '+':
-                result = number1 + number2;
-                break;
+                return result = number1 + number2;
             case '-':
-                result = number1 - number2;
-                break;
+                return result = number1 - number2;
             case '*':
-                result = number1 * number2;
-                break;
+                return result = number1 * number2;
             case '/':
                 if (number2 == 0) {
                     System.out.println("Ошибка: деление на ноль запрещено ");
+                    break;
                 } else {
-                    result = number1 / number2;
+                    return result = number1 / number2;
                 }
-                break;
             case '^':
                 result = 1;
                 for (int i = 1; i <= number2; i++) {
-                    result *= number1;
+                    return result *= number1;
                 }
-                break;
             case '%':
-                result = number1 % number2;
-                break;
+                return result = number1 % number2;
             default:
-                System.out.println("Ошибка: операция '" + symbol + "' не поддерживается");
+                System.out.println("Ошибка: операция '" + mathematicalSign + "' не поддерживается");
         }
         return result;
     }
-
-    private double resultNegativeDegree;
 
     public double negativeDegree() {
         if (number2 < 0) {
