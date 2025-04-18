@@ -1,16 +1,16 @@
-package Lesson_2;
-
 public class WolfTest {
     public static void main(String[] args) {
         Wolf archie = new Wolf();
-        String gender = "Мужской";
-        String name = "Арчик";
-        int weight = 126;
-        int age = 7;
-        String color = "серый";
-
-        System.out.println("Волк с именем " + name + ", пол  " + gender + ", возраст " + age +
-                " лет, вес " + weight + "кг, цыет шерсти " + color);
+        archie.setGender("Мужской");
+        archie.setName("Арчик");
+        archie.setWeight(126);
+        archie.setAge(8);
+        archie.setColor("Серый");
+        System.out.println(archie.getGender());
+        System.out.println(archie.getName());
+        System.out.println(archie.getWeight());
+        System.out.println(archie.getAge());
+        System.out.println(archie.getColor());
         archie.go();
         archie.sit();
         archie.run();
