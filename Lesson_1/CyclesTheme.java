@@ -1,3 +1,5 @@
+package Lessonn1.Lesson1.lesson3;
+
 public class CyclesTheme {
     public static void main(String[] args) {
         System.out.println("1. ПОДСЧЕТ СУММЫ ЧЕТНЫХ И НЕЧЕТНЫХ ЧИСЕЛ");
@@ -40,15 +42,13 @@ public class CyclesTheme {
         System.out.println("\n\n3. ВЫВОД РЕВЕРСИВНОГО ЧИСЛА И СУММЫ ЕГО ЦИФР");
         checkedNumber1 = 1234;
         int currentNumber = checkedNumber1;
-        int sum = 0;
+        int digit = 0;
         while (currentNumber > 0) {
-            int digit = currentNumber % 10;
-            System.out.print(digit);
+            digit += currentNumber % 10;
             currentNumber /= 10;
-            sum += checkedNumber1 % 10;
             checkedNumber1 /= 10;
         }
-        System.out.println("\nсумма выделенных цифр " + sum);
+        System.out.println("сумма выделенных цифр " + digit);
 
         System.out.println("\n4. ВЫВОД ЧИСЕЛ В НЕСКОЛЬКО СТРОК");
         endInclusive = 23;
@@ -90,30 +90,30 @@ public class CyclesTheme {
         }
 
         System.out.println("\n6. ВЫВОД ГЕОМЕТРИЧЕСКИХ ФИГУР");
-        int widthFigure = 10;
-        int heightFigure = 5;
-        for (int i = 0; i < heightFigure; i++) {
-            for (int j = 0; j < widthFigure; j++) {
+        int width = 10;
+        int height = 5;
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
         System.out.println();
 
-        widthFigure = 5;
-        while (widthFigure >= 1) {
+        width = 5;
+        while (width >= 1) {
             int j = 1;
-            while (j <= widthFigure) {
+            while (j <= width) {
                 System.out.print("#");
                 j++;
             }
             System.out.println();
-            widthFigure--;
+            width--;
         }
         System.out.println();
 
-        widthFigure = 3;
-        int numberLines = 2 * widthFigure - 1;
+        width = 3;
+        int numberLines = 2 * width - 1;
         counter = 1;
         int increment = 1;
         int lineWidth = 1;
@@ -123,7 +123,7 @@ public class CyclesTheme {
                 System.out.print("$");
             } while (++j < lineWidth);
             System.out.println();
-            if (counter == widthFigure) increment = -1;
+            if (counter == width) increment = -1;
             lineWidth += increment;
         } while (++counter <= numberLines);
 
@@ -159,12 +159,10 @@ public class CyclesTheme {
 
         System.out.println("\n9. ПРОВЕРКА, ЯВЛЯЕТСЯ ЛИ ЧИСЛО СЧАСТЛИВЫМ");
         initialNumber = 123321;
-        int halfLeftDigits = initialNumber;
-        int halfRightDigits = initialNumber;
+        int halfLeftDigits = initialNumber / 1000;
+        int halfRightDigits = initialNumber % 1000;
         int sumLeftDigits = 0;
         int sumRightDigits = 0;
-        halfLeftDigits /= 1000;
-        halfRightDigits %= 1000;
         int buf1 = halfLeftDigits;
         int buf2 = halfRightDigits;
         while (buf2 > 0) {
