@@ -1,3 +1,5 @@
+package Lesson2;
+
 public class NameMethod {
     public static void main(String[] args) {
         ContainsBoolean containsBoolean = new ContainsBoolean();
