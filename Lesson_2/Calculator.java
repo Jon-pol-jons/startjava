@@ -1,12 +1,10 @@
-import java.util.Scanner;
+package Lesson2;
 
 public class Calculator {
     private int number1;
     private int number2;
-    private char mathematicalSign;
-    private double resultNegativeDegree;
-
-    private int result = 0;
+    private char matSign;
+    private char zero;
 
     public void setNumber1(int number1) {
         this.number1 = number1;
@@ -16,46 +14,50 @@ public class Calculator {
         this.number2 = number2;
     }
 
-    public void setMathematicalSign(char mathematicalSign) {
-        this.mathematicalSign = mathematicalSign;
+    public void setMatSign(char matSign) {
+        this.matSign = matSign;
     }
 
-    Scanner scanner = new Scanner(System.in);
-
-
-    public int calculate() {
-        switch (mathematicalSign) {
+    public double calculate(double number1, int number2) {
+        switch (matSign) {
             case '+':
-                return result = number1 + number2;
+                return number1 + number2;
             case '-':
-                return result = number1 - number2;
+                return number1 - number2;
             case '*':
-                return result = number1 * number2;
+                return number1 * number2;
             case '/':
                 if (number2 == 0) {
                     System.out.println("Ошибка: деление на ноль запрещено ");
                     break;
                 } else {
-                    return result = number1 / number2;
+                    return number1 / number2;
                 }
             case '^':
-                result = 1;
-                for (int i = 1; i <= number2; i++) {
-                    return result *= number1;
+                if (number1 == 0 && number2 <= 0) {
+                    System.out.println("Невозможно возвести 0 в степень меньше 1");
                 }
+                if (number1 == 1 || number1 == 0) {
+                    return number1;
+                }
+                if (number2 > 1) {
+                    return number1 * calculate(number1, --number2);
+                }
+                if (number2 < 1) {
+                    return 1 / number1 * calculate(number1, ++number2);
+                }
+                break;
             case '%':
-                return result = number1 % number2;
-            default:
-                System.out.println("Ошибка: операция '" + mathematicalSign + "' не поддерживается");
-        }
-        return result;
-    }
+                if (number2 == 0) {
+                    System.out.println("Деление по модулю на 0 запрещено");
+                } else {
+                    return number1 % number2;
+                }
+                break;
 
-    public double negativeDegree() {
-        if (number2 < 0) {
-            resultNegativeDegree = Math.pow(number1, number2);
+            default:
+                System.out.println("Ошибка: операция '" + matSign + "' не поддерживается");
         }
-        return resultNegativeDegree;
+        return zero;
     }
 }
-
