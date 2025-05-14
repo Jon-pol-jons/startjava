@@ -1,3 +1,5 @@
+package Lesson2;
+
 public class ContainsBoolean {
     NameReturn nameReturn = new NameReturn();
 
@@ -33,7 +35,7 @@ public class ContainsBoolean {
 
     public void recoverData() {
         nameReturn.calledMethod();
-        System.out.println("() -> востановление данных из резервной копии от 11.03.2024");
+        System.out.println("() -> восстановление данных из резервной копии от 11.03.2024");
     }
 
     public void pauseDownload() {
@@ -43,7 +45,7 @@ public class ContainsBoolean {
 
     public void resetSettings() {
         nameReturn.calledMethod();
-        System.out.println("() -> сброс настроек до заводсих для пылесоса Mi");
+        System.out.println("() -> сброс настроек до заводских для пылесоса Mi");
     }
 
     public void dataRecording() {
