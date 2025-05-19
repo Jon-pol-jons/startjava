@@ -4,7 +4,6 @@ public class Calculator {
     private int number1;
     private int number2;
     private char matSign;
-    private char zero;
 
     public void setNumber1(int number1) {
         this.number1 = number1;
@@ -18,7 +17,7 @@ public class Calculator {
         this.matSign = matSign;
     }
 
-    public double calculate(double number1, int number2) {
+    public double calculate() {
         switch (matSign) {
             case '+':
                 return number1 + number2;
@@ -34,17 +33,22 @@ public class Calculator {
                     return number1 / number2;
                 }
             case '^':
-                if (number1 == 0 && number2 <= 0) {
-                    System.out.println("Невозможно возвести 0 в степень меньше 1");
-                }
                 if (number1 == 1 || number1 == 0) {
                     return number1;
-                }
-                if (number2 > 1) {
-                    return number1 * calculate(number1, --number2);
-                }
-                if (number2 < 1) {
-                    return 1 / number1 * calculate(number1, ++number2);
+                } else if (number2 > 1) {
+                    int result = 1;
+                    for (int i = 1; i <= number2; i++) {
+                        result = result * number1;
+                    }
+                    return result;
+                } else if (number2 < 1) {
+                    double p = number2 < 0 ? 1.0 / number1 : number1;
+                    int m = number2 < 0 ? -number2 : number2;
+                    double res = 1.0;
+                    while (m-- > 0) {
+                        res *= p;
+                    }
+                    return res;
                 }
                 break;
             case '%':
@@ -58,6 +62,6 @@ public class Calculator {
             default:
                 System.out.println("Ошибка: операция '" + matSign + "' не поддерживается");
         }
-        return zero;
+        return number1;
     }
 }
