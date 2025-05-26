@@ -1,33 +1,40 @@
 package Lesson2;
 
-public class NameMethod {
+public class MethodNamesThemeTest {
     public static void main(String[] args) {
-        ContainsBoolean containsBoolean = new ContainsBoolean();
-        containsBoolean.findLongWord();
-        containsBoolean.selectingMenu();
-        containsBoolean.сalculateScore();
-        containsBoolean.searchWord();
-        containsBoolean.error();
-        containsBoolean.synchronization();
-        containsBoolean.recoverData();
-        containsBoolean.pauseDownload();
-        containsBoolean.resetSettings();
-        containsBoolean.dataRecording();
-        containsBoolean.convertTemperature();
-        containsBoolean.mathematicalExpression();
-        containsBoolean.winnerGame();
-        containsBoolean.findBook();
-
+        absenceBooleanOutput();
+        containsBooleanOutput();
+    }
+    static void absenceBooleanOutput () {
         AbsenceBoolean absenceBoolean = new AbsenceBoolean();
-        absenceBoolean.shouldPerformDivision();
-        absenceBoolean.isFileDeleted();
-        absenceBoolean.hasUniqueNumber();
-        absenceBoolean.hasLatter();
-        absenceBoolean.hasEqualNumber();
-        absenceBoolean.hasResidualAttempt();
-        absenceBoolean.isStringEmpty();
-        absenceBoolean.isEvenNumber();
-        absenceBoolean.isCorrectPath();
-        absenceBoolean.isFileExist();
+        absenceBoolean.findLongWord();
+        absenceBoolean.selectingMenu();
+        absenceBoolean.сalculateScore();
+        absenceBoolean.searchWord();
+        absenceBoolean.error();
+        absenceBoolean.synchronization();
+        absenceBoolean.recoverData();
+        absenceBoolean.pauseDownload();
+        absenceBoolean.resetSettings();
+        absenceBoolean.dataRecording();
+        absenceBoolean.convertTemperature();
+        absenceBoolean.mathematicalExpression();
+        absenceBoolean.winnerGame();
+        absenceBoolean.findBook();
+
+    }
+    static void containsBooleanOutput() {
+        ContainsBoolean containsBoolean = new ContainsBoolean();
+        System.out.println(containsBoolean.shouldPerformDivision());
+        System.out.println(containsBoolean.isFileDeleted());
+        System.out.println(containsBoolean.hasUniqueNumber());
+        System.out.println(containsBoolean.hasLatter());
+        System.out.println(containsBoolean.hasEqualNumber());
+        System.out.println(containsBoolean.hasResidualAttempt());
+        System.out.println(containsBoolean.isStringEmpty());
+        System.out.println(containsBoolean.isEvenNumber());
+        System.out.println(containsBoolean.isCorrectPath());
+        System.out.println(containsBoolean.isFileExist());
+        System.out.println(containsBoolean.isFileExist());
     }
 }
