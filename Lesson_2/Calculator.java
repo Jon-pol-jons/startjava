@@ -3,7 +3,7 @@ package Lesson2;
 public class Calculator {
     private int number1;
     private int number2;
-    private char matSign;
+    private char mathSign;
 
     public void setNumber1(int number1) {
         this.number1 = number1;
@@ -13,12 +13,12 @@ public class Calculator {
         this.number2 = number2;
     }
 
-    public void setMatSign(char matSign) {
-        this.matSign = matSign;
+    public void setMathSign(char mathSign) {
+        this.mathSign = mathSign;
     }
 
     public double calculate() {
-        switch (matSign) {
+        switch (mathSign) {
             case '+':
                 return number1 + number2;
             case '-':
@@ -29,38 +29,23 @@ public class Calculator {
                 if (number2 == 0) {
                     System.out.println("Ошибка: деление на ноль запрещено ");
                     break;
-                } else {
-                    return number1 / number2;
                 }
+                return number1 / number2;
+
             case '^':
-                if (number1 == 1 || number1 == 0) {
-                    return number1;
-                } else if (number2 > 1) {
-                    int result = 1;
-                    for (int i = 1; i <= number2; i++) {
-                        result = result * number1;
-                    }
-                    return result;
-                } else if (number2 < 1) {
-                    double p = number2 < 0 ? 1.0 / number1 : number1;
-                    int m = number2 < 0 ? -number2 : number2;
-                    double res = 1.0;
-                    while (m-- > 0) {
-                        res *= p;
-                    }
-                    return res;
+                double result = 1;
+                for (int i = 0; i < Math.abs(number2); i++) {
+                    result *= number1;
                 }
-                break;
+                return number2 >= 0 ? result : 1 / result;
             case '%':
                 if (number2 == 0) {
                     System.out.println("Деление по модулю на 0 запрещено");
-                } else {
-                    return number1 % number2;
+                    break;
                 }
-                break;
-
+                return number1 % number2;
             default:
-                System.out.println("Ошибка: операция '" + matSign + "' не поддерживается");
+                System.out.println("Ошибка: операция '" + mathSign + "' не поддерживается");
         }
         return number1;
     }
