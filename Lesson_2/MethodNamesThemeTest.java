@@ -5,7 +5,8 @@ public class MethodNamesThemeTest {
         absenceBooleanOutput();
         containsBooleanOutput();
     }
-    static void absenceBooleanOutput () {
+
+    static void absenceBooleanOutput() {
         AbsenceBoolean absenceBoolean = new AbsenceBoolean();
         absenceBoolean.findLongWord();
         absenceBoolean.selectingMenu();
@@ -21,8 +22,8 @@ public class MethodNamesThemeTest {
         absenceBoolean.mathematicalExpression();
         absenceBoolean.winnerGame();
         absenceBoolean.findBook();
-
     }
+
     static void containsBooleanOutput() {
         ContainsBoolean containsBoolean = new ContainsBoolean();
         System.out.println(containsBoolean.shouldPerformDivision());
