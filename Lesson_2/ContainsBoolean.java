@@ -1,73 +1,69 @@
 package Lesson2;
 
+import java.util.Random;
+
 public class ContainsBoolean {
 
-    public void findLongWord() {
-        System.out.println("() -> поиск самого длинного слова в предложении из книги по Java");
+    Random random = new Random();
+    private boolean test = random.nextBoolean();
+
+    public boolean shouldPerformDivision() {
+        System.out.println("\n" + MethodName.getCurrentName() +
+                "() -> программа выполняет деление  или завершается? ");
+        return true;
     }
 
-    public void selectingMenu() {
-        System.out.println(MeaningMethodName.returningValueMethodName() +
-                "() -> выбор пункта меню в текстовом редакторе на macOS");
+    public boolean isFileDeleted() {
+        System.out.println(MethodName.getCurrentName() +
+                "() -> удалился ли файл на жестком диске или флешке? ");
+        return false;
     }
 
-    public void сalculateScore() {
-        System.out.println(MeaningMethodName.returningValueMethodName() +
-                "() -> вычисляется среднее значение оценок в школе №1234");
+    public boolean hasUniqueNumber() {
+        System.out.println(MethodName.getCurrentName() +
+                "() -> последовательность содержит уникальную цифру? ");
+        return false;
     }
 
-    public void searchWord() {
-        System.out.println(MeaningMethodName.returningValueMethodName() +
-                "() -> подсчет количества уникальных слов в Война и мир");
+    public boolean hasLatter() {
+        System.out.println(MethodName.getCurrentName() +
+                "() -> пользователь ввел букву или что-то другое?");
+        return false;
     }
 
-    public void error() {
-        System.out.println(MeaningMethodName.returningValueMethodName() +
-                "() -> выводится сообщение об ошибке");
+    public boolean hasEqualNumber() {
+        System.out.println(MethodName.getCurrentName() +
+                "() -> в проверяемых числах, есть равные цифры? ");
+        return false;
     }
 
-    public void synchronization() {
-        System.out.println(MeaningMethodName.returningValueMethodName() +
-                "() -> синхронизация данных с облачным хранилищем");
+    public boolean hasResidualAttempt() {
+        System.out.println(MethodName.getCurrentName() +
+                "() -> в игре \"Марио\" остались попытки? ");
+        return false;
     }
 
-    public void recoverData() {
-        System.out.println(MeaningMethodName.returningValueMethodName() +
-                "() -> восстановление данных из резервной копии от 11.03.2024");
+    public boolean isStringEmpty() {
+        System.out.println(MethodName.getCurrentName() +
+                "() -> пользователь ввёл пустую строку или из одних пробелов? ");
+        return false;
     }
 
-    public void pauseDownload() {
-        System.out.println(MeaningMethodName.returningValueMethodName() +
-                "() -> приостановление загрузки mp3-файла группы Ария");
+    public boolean isEvenNumber() {
+        System.out.println(MethodName.getCurrentName() +
+                "() -> на кубике, который бросил компьютер, выпало четное число? ");
+        return false;
     }
 
-    public void resetSettings() {
-        System.out.println(MeaningMethodName.returningValueMethodName() +
-                "() -> сброс настроек до заводских для пылесоса Mi");
+    public boolean isCorrectPath() {
+        System.out.println(MethodName.getCurrentName() +
+                "() -> путь до файла, который вы ищите на ssd, действительный? ");
+        return false;
     }
 
-    public void dataRecording() {
-        System.out.println(MeaningMethodName.returningValueMethodName() +
-                "() -> запись содержимого в файл по указанному пути на флешку");
-    }
-
-    public void convertTemperature() {
-        System.out.println(MeaningMethodName.returningValueMethodName() +
-                "() -> преобразовывание температуры из Цельсия в Фаренгейт");
-    }
-
-    public void mathematicalExpression() {
-        System.out.println(MeaningMethodName.returningValueMethodName() +
-                "() -> выводим математическое выражение с тремя аргументами");
-    }
-
-    public void winnerGame() {
-        System.out.println(MeaningMethodName.returningValueMethodName() +
-                "() -> выявляем победителя среди гонщиков игры \"Need For Speed\"");
-    }
-
-    public void findBook() {
-        System.out.println(MeaningMethodName.returningValueMethodName() +
-                "() -> найти книгу по имени");
+    public boolean isFileExist() {
+        System.out.println(MethodName.getCurrentName() +
+                "() -> файл по указанному адресу существует? ");
+        return true;
     }
 }
