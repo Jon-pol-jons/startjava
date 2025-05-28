@@ -1,19 +1,13 @@
 package Lesson2;
 
-import java.util.Random;
-
-public class ContainsBoolean {
-
-    Random random = new Random();
-    private boolean test = random.nextBoolean();
-
+public class ContainsBoolMethods {
     public boolean shouldPerformDivision() {
         System.out.println("\n" + MethodName.getCurrentName() +
                 "() -> программа выполняет деление  или завершается? ");
         return true;
     }
 
-    public boolean isFileDeleted() {
+    public boolean isExist() {
         System.out.println(MethodName.getCurrentName() +
                 "() -> удалился ли файл на жестком диске или флешке? ");
         return false;
@@ -25,7 +19,7 @@ public class ContainsBoolean {
         return false;
     }
 
-    public boolean hasLatter() {
+    public boolean isLetter() {
         System.out.println(MethodName.getCurrentName() +
                 "() -> пользователь ввел букву или что-то другое?");
         return false;
@@ -37,13 +31,13 @@ public class ContainsBoolean {
         return false;
     }
 
-    public boolean hasResidualAttempt() {
+    public boolean hasAttempt() {
         System.out.println(MethodName.getCurrentName() +
                 "() -> в игре \"Марио\" остались попытки? ");
         return false;
     }
 
-    public boolean isStringEmpty() {
+    public boolean isBlank() {
         System.out.println(MethodName.getCurrentName() +
                 "() -> пользователь ввёл пустую строку или из одних пробелов? ");
         return false;
@@ -55,7 +49,7 @@ public class ContainsBoolean {
         return false;
     }
 
-    public boolean isCorrectPath() {
+    public boolean isValidPath() {
         System.out.println(MethodName.getCurrentName() +
                 "() -> путь до файла, который вы ищите на ssd, действительный? ");
         return false;
