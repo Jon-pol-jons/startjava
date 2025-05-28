@@ -47,6 +47,6 @@ public class Calculator {
             default:
                 System.out.println("Ошибка: операция '" + mathSign + "' не поддерживается");
         }
-        return number1;
+        return 0;
     }
 }
