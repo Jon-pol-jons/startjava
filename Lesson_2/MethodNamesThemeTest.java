@@ -6,36 +6,36 @@ public class MethodNamesThemeTest {
         containsBooleanOutput();
     }
 
-    static void absenceBooleanOutput() {
+    private static void absenceBooleanOutput() {
         AbsenceBoolean absenceBoolean = new AbsenceBoolean();
-        absenceBoolean.findLongWord();
-        absenceBoolean.selectingMenu();
-        absenceBoolean.сalculateScore();
-        absenceBoolean.searchWord();
-        absenceBoolean.error();
-        absenceBoolean.synchronization();
+        absenceBoolean.findTheLongWord();
+        absenceBoolean.selectItemMenu();
+        absenceBoolean.сalculateAverageScore();
+        absenceBoolean.countingUniqueWords();
+        absenceBoolean.errorMessage();
+        absenceBoolean.syncCloudStorage();
         absenceBoolean.recoverData();
         absenceBoolean.pauseDownload();
         absenceBoolean.resetSettings();
-        absenceBoolean.dataRecording();
+        absenceBoolean.writeСontentFile();
         absenceBoolean.convertTemperature();
-        absenceBoolean.mathematicalExpression();
-        absenceBoolean.winnerGame();
+        absenceBoolean.mathExpression();
+        absenceBoolean.findWinnerGame();
         absenceBoolean.findBook();
     }
 
-    static void containsBooleanOutput() {
-        ContainsBoolean containsBoolean = new ContainsBoolean();
-        System.out.println(containsBoolean.shouldPerformDivision());
-        System.out.println(containsBoolean.isFileDeleted());
-        System.out.println(containsBoolean.hasUniqueNumber());
-        System.out.println(containsBoolean.hasLatter());
-        System.out.println(containsBoolean.hasEqualNumber());
-        System.out.println(containsBoolean.hasResidualAttempt());
-        System.out.println(containsBoolean.isStringEmpty());
-        System.out.println(containsBoolean.isEvenNumber());
-        System.out.println(containsBoolean.isCorrectPath());
-        System.out.println(containsBoolean.isFileExist());
-        System.out.println(containsBoolean.isFileExist());
+    private static void containsBooleanOutput() {
+        ContainsBoolMethods containsBooleanMethods = new ContainsBoolMethods();
+        System.out.println(containsBooleanMethods.shouldPerformDivision());
+        System.out.println(containsBooleanMethods.isExist());
+        System.out.println(containsBooleanMethods.hasUniqueNumber());
+        System.out.println(containsBooleanMethods.isLetter());
+        System.out.println(containsBooleanMethods.hasEqualNumber());
+        System.out.println(containsBooleanMethods.hasAttempt());
+        System.out.println(containsBooleanMethods.isBlank());
+        System.out.println(containsBooleanMethods.isEvenNumber());
+        System.out.println(containsBooleanMethods.isValidPath());
+        System.out.println(containsBooleanMethods.isFileExist());
+        System.out.println(containsBooleanMethods.isFileExist());
     }
 }
