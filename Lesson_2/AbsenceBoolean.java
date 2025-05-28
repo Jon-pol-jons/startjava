@@ -1,32 +1,32 @@
 package Lesson2;
 
 public class AbsenceBoolean {
-    public void findLongWord() {
+    public void findTheLongWord() {
         System.out.println(MethodName.getCurrentName() +
                 "() -> поиск самого длинного слова в предложении из книги по Java");
     }
 
-    public void selectingMenu() {
+    public void selectItemMenu() {
         System.out.println(MethodName.getCurrentName() +
                 "() -> выбор пункта меню в текстовом редакторе на macOS");
     }
 
-    public void сalculateScore() {
+    public void сalculateAverageScore() {
         System.out.println(MethodName.getCurrentName() +
                 "() -> вычисляется среднее значение оценок в школе №1234");
     }
 
-    public void searchWord() {
+    public void countingUniqueWords() {
         System.out.println(MethodName.getCurrentName() +
                 "() -> подсчет количества уникальных слов в Война и мир");
     }
 
-    public void error() {
+    public void errorMessage() {
         System.out.println(MethodName.getCurrentName() +
                 "() -> выводится сообщение об ошибке");
     }
 
-    public void synchronization() {
+    public void syncCloudStorage() {
         System.out.println(MethodName.getCurrentName() +
                 "() -> синхронизация данных с облачным хранилищем");
     }
@@ -46,22 +46,22 @@ public class AbsenceBoolean {
                 "() -> сброс настроек до заводских для пылесоса Mi");
     }
 
-    public void dataRecording() {
+    public void writeСontentFile() {
         System.out.println(MethodName.getCurrentName() +
                 "() -> запись содержимого в файл по указанному пути на флешку");
     }
 
     public void convertTemperature() {
         System.out.println(MethodName.getCurrentName() +
-                "() -> преобразовывание температуры из Цельсия в Фаренгейт");
+                "() -> преобразование температуры из Цельсия в Фаренгейт");
     }
 
-    public void mathematicalExpression() {
+    public void mathExpression() {
         System.out.println(MethodName.getCurrentName() +
                 "() -> выводим математическое выражение с тремя аргументами");
     }
 
-    public void winnerGame() {
+    public void findWinnerGame() {
         System.out.println(MethodName.getCurrentName() +
                 "() -> выявляем победителя среди гонщиков игры \"Need For Speed\"");
     }
