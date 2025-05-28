@@ -16,7 +16,7 @@ public class CalculatorTest {
             calculator.setNumber2(number2);
             System.out.print("Введите знак операции (+, -, *, /, ^, %): ");
             char mathSign = scanner.next().charAt(0);
-            calculator.setMatSign(mathSign);
+            calculator.setMathSign(mathSign);
             System.out.println(calculator.calculate());
             do {
                 System.out.print("Хотите продолжить вычисления? [yes/no]: ");
