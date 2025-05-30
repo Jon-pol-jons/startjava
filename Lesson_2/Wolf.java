@@ -1,3 +1,5 @@
+package Lesson2;
+
 public class Wolf {
     private String gender;
     private String name;
@@ -65,7 +67,7 @@ public class Wolf {
         System.out.println("Воет");
     }
 
-    public void hunting() {
+    public void hunt() {
         System.out.println("Охотится");
     }
 }
