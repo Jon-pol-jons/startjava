@@ -8,7 +8,7 @@ public class MethodNamesThemeTest {
 
     private static void printMethodWithoutBoolean() {
         AbsenceBoolean ab = new AbsenceBoolean();
-        ab.findTheLongestWord();
+        ab.findLongestWord();
         ab.selectMenuItem();
         ab.сalculateAverageScore();
         ab.countUniqueWords();
@@ -19,9 +19,9 @@ public class MethodNamesThemeTest {
         ab.resetSettings();
         ab.writeToFile();
         ab.convertTemperature();
-        ab.renderMathExpression();
+        ab.printMathExpression();
         ab.findWinner();
-        ab.findBookByName();
+        ab.findBookByAuthor();
     }
 
     private static void containsBooleanOutput() {
