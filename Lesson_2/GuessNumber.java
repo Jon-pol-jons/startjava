@@ -24,7 +24,8 @@ public class GuessNumber {
             if (turnPlayers == targetNum) {
                 System.out.println(person1.getName() + ", вы победили!!!");
                 break;
-            } else if (turnPlayers > targetNum) {
+            }
+            if (turnPlayers > targetNum) {
                 System.out.println(person1.getName() + ", вы ввели больше того, что загадал компьютер");
             } else if (turnPlayers < targetNum) {
                 System.out.println(person1.getName() + ", вы ввели меньше того, что загадал компьютер");
@@ -42,4 +43,3 @@ public class GuessNumber {
         } while (turnPlayers != targetNum);
     }
 }
-
