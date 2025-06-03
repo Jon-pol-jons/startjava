@@ -1,7 +1,7 @@
 package Lesson2;
 
 public class AbsenceBoolean {
-    public void findTheLongestWord() {
+    public void findLongestWord() {
         System.out.println(MethodUtil.getCurrentName() +
                 "() -> поиск самого длинного слова в предложении из книги по Java");
     }
@@ -56,7 +56,7 @@ public class AbsenceBoolean {
                 "() -> преобразование температуры из Цельсия в Фаренгейт");
     }
 
-    public void renderMathExpression() {
+    public void printMathExpression() {
         System.out.println(MethodUtil.getCurrentName() +
                 "() -> выводим математическое выражение с тремя аргументами");
     }
@@ -66,7 +66,7 @@ public class AbsenceBoolean {
                 "() -> выявляем победителя среди гонщиков игры \"Need For Speed\"");
     }
 
-    public void findBookByName() {
+    public void findBookByAuthor() {
         System.out.println(MethodUtil.getCurrentName() +
                 "() -> найти книгу по имени");
     }
