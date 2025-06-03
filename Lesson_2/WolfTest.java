@@ -1,3 +1,5 @@
+package Lesson2;
+
 public class WolfTest {
     public static void main(String[] args) {
         Wolf archie = new Wolf();
@@ -15,6 +17,6 @@ public class WolfTest {
         archie.sit();
         archie.run();
         archie.howl();
-        archie.hunting();
+        archie.hunt();
     }
 }
