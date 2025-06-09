@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c955cc5-bf15-4059-8b57-2692fc943db5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/lesson_2_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/method/method.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_1/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_1/final_/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_1/CyclesTheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_1/base/CyclesTheme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_1/IfElseStatementTheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_1/base/IfElseStatementTheme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_1/MyFirstGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_1/final_/MyFirstGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_1/RpsGameFormatting.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_1/final_/RpsGameFormatting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_1/VariableNamesTheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_1/base/VariableNamesTheme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_1/VariablesTheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_1/base/VariablesTheme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/AbsenceBoolean.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/method/naming/AbsenceBoolean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/calculator/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/calculator/CalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/ContainsBoolMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/method/naming/ContainsBoolMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/GuessNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/guess/GuessNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/GuessNumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/guess/GuessNumberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/Jaeger.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/robot/Jaeger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/JaegerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/robot/JaegerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/MethodNamesThemeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/method/naming/MethodNamesThemeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/MethodUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/method/naming/MethodUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/person/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/guess/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/Wolf.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/animal/Wolf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson_2/WolfTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/startjava/lesson_2_3/animal/WolfTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MethodUtil.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2yH2i8eysoBGWQu5vuYmvWIRwVa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Java/StartJava/StartJava/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c955cc5-bf15-4059-8b57-2692fc943db5" name="Changes" comment="" />
+      <created>1749477303573</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749477303573</updated>
+      <workItem from="1749477304577" duration="634000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
