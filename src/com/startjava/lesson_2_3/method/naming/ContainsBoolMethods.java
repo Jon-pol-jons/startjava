@@ -1,4 +1,4 @@
-package Lesson2;
+package src.com.startjava.lesson_2_3.method.naming;
 
 public class ContainsBoolMethods {
     public boolean shouldPerformDivision() {
