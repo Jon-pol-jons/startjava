@@ -24,9 +24,9 @@ public class RpsGameFormatting {
         console.close();
     }
 
-    private static final String ROCK = "✊";
-    private static final String SCISSORS = "✌️";
-    private static final String PAPER = "✋";
+    private static final String rock = "✊";
+    private static final String scissors = "✌️";
+    private static final String paper = "✋";
 
     private static String inputName(Scanner console) {
         System.out.print("Введите имя игрока: ");
@@ -39,22 +39,22 @@ public class RpsGameFormatting {
     }
 
     private static String determineSign(int position) {
-        String sign = ROCK;
+        String sign = rock;
         if (position > 66) {
-            sign = ROCK;
+            sign = rock;
         } else if (position > 33) {
-            sign = ROCK;
+            sign = rock;
         }
         return sign;
     }
 
     private static void showSigns(String sign) throws InterruptedException {
         for (int i = 0; i < 5; i++) {
-            System.out.print(ROCK + "\r");
+            System.out.print(rock + "\r");
             Thread.sleep(100);
-            System.out.print(SCISSORS + "\r");
+            System.out.print(scissors + "\r");
             Thread.sleep(100);
-            System.out.print(PAPER + "\r");
+            System.out.print(paper + "\r");
             Thread.sleep(100);
         }
         System.out.println(sign);
@@ -66,9 +66,9 @@ public class RpsGameFormatting {
             return;
         }
 
-        boolean isEqualName1 = sign1.equals(ROCK) && sign2.equals(SCISSORS) ||
-                sign1.equals(SCISSORS) && sign2.equals(PAPER) ||
-                sign1.equals(PAPER) && sign2.equals(ROCK);
+        boolean isEqualName1 = sign1.equals(rock) && sign2.equals(scissors) ||
+                sign1.equals(scissors) && sign2.equals(paper) ||
+                sign1.equals(paper) && sign2.equals(rock);
 
         if (isEqualName1) {
             System.out.println("\nПобедил - " + name1);
