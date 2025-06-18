@@ -1,9 +1,13 @@
-package src.com.startjava.lesson_2_3.rps;
+package com.startjava.lesson_2_3.rps;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class RpsGameFormatting {
+    private static final String ROCK = "✊";
+    private static final String SCISSORS = "✌️";
+    private static final String PAPER = "✋";
+
     public static void main(String[] args) throws InterruptedException {
         Random r = new Random();
         Scanner console = new Scanner(System.in);
@@ -12,11 +16,15 @@ public class RpsGameFormatting {
 
         // Ход первого игрока
         int position = generatePosition(name1, r);
+
+
+        System.out.println(position + " name1 ");
         String sign1 = determineSign(position);
         showSigns(sign1);
 
         // Ход второго игрока
         position = generatePosition(name2, r);
+        System.out.println(position + " name2");
         String sign2 = determineSign(position);
         showSigns(sign2);
 
@@ -24,9 +32,6 @@ public class RpsGameFormatting {
         console.close();
     }
 
-    private static final String rock = "✊";
-    private static final String scissors = "✌️";
-    private static final String paper = "✋";
 
     private static String inputName(Scanner console) {
         System.out.print("Введите имя игрока: ");
@@ -39,36 +44,36 @@ public class RpsGameFormatting {
     }
 
     private static String determineSign(int position) {
-        String sign = rock;
+        String sign = ROCK;
         if (position > 66) {
-            sign = rock;
+            sign = PAPER;
         } else if (position > 33) {
-            sign = rock;
+            sign = SCISSORS;
         }
         return sign;
     }
 
     private static void showSigns(String sign) throws InterruptedException {
         for (int i = 0; i < 5; i++) {
-            System.out.print(rock + "\r");
+            System.out.print(ROCK + "\r");
             Thread.sleep(100);
-            System.out.print(scissors + "\r");
+            System.out.print(SCISSORS + "\r");
             Thread.sleep(100);
-            System.out.print(paper + "\r");
+            System.out.print(PAPER + "\r");
             Thread.sleep(100);
         }
         System.out.println(sign);
     }
 
     private static void determineWinner(String name1, String sign1, String name2, String sign2) {
-        if (sign1.equals(sign2)) {
+        if (sign1 == sign2) {
             System.out.println("\nПобедила дружба!");
             return;
         }
 
-        boolean isEqualName1 = sign1.equals(rock) && sign2.equals(scissors) ||
-                sign1.equals(scissors) && sign2.equals(paper) ||
-                sign1.equals(paper) && sign2.equals(rock);
+        boolean isEqualName1 = sign1.equals(ROCK) && sign2.equals(SCISSORS) ||
+                sign1.equals(SCISSORS) && sign2.equals(PAPER) ||
+                sign1.equals(PAPER) && sign2.equals(ROCK);
 
         if (isEqualName1) {
             System.out.println("\nПобедил - " + name1);

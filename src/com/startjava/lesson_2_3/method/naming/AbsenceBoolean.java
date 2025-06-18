@@ -1,4 +1,4 @@
-package src.com.startjava.lesson_2_3.method.naming;
+package com.startjava.lesson_2_3.method.naming;
 
 public class AbsenceBoolean {
     public void findLongestWord() {
