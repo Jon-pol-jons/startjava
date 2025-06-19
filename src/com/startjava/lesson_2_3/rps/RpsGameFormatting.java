@@ -17,7 +17,6 @@ public class RpsGameFormatting {
         // Ход первого игрока
         int position = generatePosition(name1, r);
 
-
         System.out.println(position + " name1 ");
         String sign1 = determineSign(position);
         showSigns(sign1);
@@ -31,7 +30,6 @@ public class RpsGameFormatting {
         determineWinner(name1, sign1, name2, sign2);
         console.close();
     }
-
 
     private static String inputName(Scanner console) {
         System.out.print("Введите имя игрока: ");
